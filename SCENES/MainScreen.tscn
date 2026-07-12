@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cs5dyrocwe0xn"]
+
+[node name="MainScreen" type="Node2D"]
+
+[node name="Start" type="Button" parent="."]
+offset_left = -77.000015
+offset_top = -16.000002
+offset_right = -31.000015
+offset_bottom = 14.999998
+scale = Vector2(3.325, 3.325)
+text = "Start"
+
+[node name="Level Select" type="Button" parent="."]
+offset_left = -192.0
+offset_top = 131.0
+offset_right = -93.0
+offset_bottom = 162.0
+scale = Vector2(3.85, 3.85)
+text = "Level Select
+"
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 442.0
+offset_top = -306.0
+offset_right = 479.0
+offset_bottom = -275.0
+scale = Vector2(2.815, 2.815)
+text = "Exit
+"

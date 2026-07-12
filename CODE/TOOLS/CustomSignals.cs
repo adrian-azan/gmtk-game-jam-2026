@@ -15,4 +15,8 @@ public partial class CustomSignals : Node
 	//SAMPLE
 	//[Signal]
 	//public delegate void LoadNotesEventHandler();
+
+
+	[Signal]
+	public delegate void StartLevelEventHandler(int level);
 }
