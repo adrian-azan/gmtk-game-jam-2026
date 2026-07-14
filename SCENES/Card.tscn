@@ -1,8 +1,44 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfaux4s65mmk1"]
+[gd_scene load_steps=5 format=3 uid="uid://dfaux4s65mmk1"]
 
+[ext_resource type="Script" uid="uid://dpu2c20mqb3j0" path="res://CODE/Card.cs" id="1_ldbxv"]
 [ext_resource type="Texture2D" uid="uid://bsn27rj8msn1k" path="res://ART/Card-Designs/png files/Card Faces/Clubs/C-1-Card.png" id="1_xy7wn"]
+[ext_resource type="Texture2D" uid="uid://ja8n3ucryamc" path="res://ART/Card-Designs/png files/card_back.png" id="2_haq2o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_haq2o"]
+size = Vector2(568, 805)
 
 [node name="Card" type="Node2D"]
+script = ExtResource("1_ldbxv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_xy7wn")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("2_haq2o")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_haq2o")
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(600, 800)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -295.0
+offset_top = -400.0
+offset_right = 305.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -191.0
+offset_top = -396.0
+offset_right = -151.0
+offset_bottom = -373.0
+theme_override_font_sizes/font_size = 81
+text = "0"

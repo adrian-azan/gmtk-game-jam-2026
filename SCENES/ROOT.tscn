@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://rxuqmv7k01ex"]
 
 [ext_resource type="PackedScene" uid="uid://cs5dyrocwe0xn" path="res://SCENES/MainScreen.tscn" id="1_dd11l"]
-[ext_resource type="Script" uid="uid://bi3ae2c8brjsp" path="res://SCENES/Root.cs" id="1_oao7i"]
+[ext_resource type="Script" uid="uid://bi3ae2c8brjsp" path="res://CODE/Root.cs" id="1_oao7i"]
 [ext_resource type="PackedScene" uid="uid://bv66lw7ypi6u8" path="res://SCENES/PlayScreen.tscn" id="2_iyeps"]
-[ext_resource type="Script" uid="uid://cgmwsrge1l6ta" path="res://SCENES/MainScreen.cs" id="3_ihl0d"]
+[ext_resource type="Script" uid="uid://cgmwsrge1l6ta" path="res://CODE/MainScreen.cs" id="3_ihl0d"]
 
 [node name="Root" type="Node2D"]
 script = ExtResource("1_oao7i")
@@ -11,7 +11,6 @@ script = ExtResource("1_oao7i")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="MainScreen" parent="." instance=ExtResource("1_dd11l")]
-visible = false
 script = ExtResource("3_ihl0d")
 
 [node name="LEVELS" type="Node2D" parent="."]
@@ -22,27 +21,41 @@ scale = Vector2(0.415, 0.415)
 visible = false
 position = Vector2(-87.00002, -148.00002)
 scale = Vector2(0.835, 0.835)
+_rows = 2
 
 [node name="2" parent="LEVELS" instance=ExtResource("2_iyeps")]
 visible = false
 position = Vector2(-349.72296, -143.81927)
 scale = Vector2(0.835, 0.835)
+_rows = 2
 _columns = 3
 
 [node name="3" parent="LEVELS" instance=ExtResource("2_iyeps")]
 visible = false
-position = Vector2(-874.6987, -79.5181)
+position = Vector2(-874.6987, -81.927734)
 scale = Vector2(0.67, 0.67)
+_rows = 2
 _columns = 6
 
 [node name="4" parent="LEVELS" instance=ExtResource("2_iyeps")]
 visible = false
 position = Vector2(-983.1323, -12.048218)
 scale = Vector2(0.529, 0.529)
+_rows = 2
 _columns = 8
 
 [node name="5" parent="LEVELS" instance=ExtResource("2_iyeps")]
+visible = false
 position = Vector2(-932.5298, -361.44604)
 scale = Vector2(0.444, 0.444)
 _rows = 4
 _columns = 9
+
+[node name="Back" type="Button" parent="."]
+visible = false
+offset_left = -547.0
+offset_top = -314.0
+offset_right = -502.0
+offset_bottom = -283.0
+scale = Vector2(2.265, 2.265)
+text = "Back"

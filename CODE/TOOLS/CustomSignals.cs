@@ -19,4 +19,14 @@ public partial class CustomSignals : Node
 
 	[Signal]
 	public delegate void StartLevelEventHandler(int level);
+	
+	[Signal]
+	public delegate void CheckCardsEventHandler(Card selectedCard);
+
+	[Signal]
+	public delegate void LockCardsEventHandler(bool locked);
+	
+	[Signal]
+	public delegate void ResetEventHandler();
+
 }

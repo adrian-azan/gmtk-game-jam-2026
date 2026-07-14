@@ -19,6 +19,52 @@ scale = Vector2(3.85, 3.85)
 text = "Level Select
 "
 
+[node name="Button" type="Button" parent="Level Select"]
+layout_mode = 0
+offset_left = -38.44156
+offset_top = -36.883118
+offset_right = -20.441559
+offset_bottom = -5.8831177
+scale = Vector2(1e-05, 1e-05)
+text = "1"
+
+[node name="Button2" type="Button" parent="Level Select"]
+layout_mode = 0
+offset_left = -4.1558456
+offset_top = -83.376625
+offset_right = 13.844154
+offset_bottom = -52.376625
+scale = Vector2(1e-05, 1e-05)
+text = "2"
+
+[node name="Button3" type="Button" parent="Level Select"]
+layout_mode = 0
+offset_left = 43.116882
+offset_top = -116.1039
+offset_right = 61.116882
+offset_bottom = -85.1039
+scale = Vector2(1e-05, 1e-05)
+text = "3"
+
+[node name="Button4" type="Button" parent="Level Select"]
+layout_mode = 0
+offset_left = 91.68831
+offset_top = -82.597404
+offset_right = 109.68831
+offset_bottom = -51.597404
+scale = Vector2(1e-05, 1e-05)
+text = "4"
+
+[node name="Button5" type="Button" parent="Level Select"]
+layout_mode = 0
+offset_left = 132.46753
+offset_top = -36.62338
+offset_right = 150.46753
+offset_bottom = -5.6233788
+scale = Vector2(1e-05, 1e-05)
+text = "5
+"
+
 [node name="Exit" type="Button" parent="."]
 offset_left = 442.0
 offset_top = -306.0
