@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://rxuqmv7k01ex"]
+[gd_scene load_steps=6 format=3 uid="uid://rxuqmv7k01ex"]
 
 [ext_resource type="PackedScene" uid="uid://cs5dyrocwe0xn" path="res://SCENES/MainScreen.tscn" id="1_dd11l"]
 [ext_resource type="Script" uid="uid://bi3ae2c8brjsp" path="res://CODE/Root.cs" id="1_oao7i"]
 [ext_resource type="PackedScene" uid="uid://bv66lw7ypi6u8" path="res://SCENES/PlayScreen.tscn" id="2_iyeps"]
 [ext_resource type="Script" uid="uid://cgmwsrge1l6ta" path="res://CODE/MainScreen.cs" id="3_ihl0d"]
+[ext_resource type="AudioStream" uid="uid://b5i4fx4y3ev0y" path="res://ART/MUSIC/card-matching-game-song-snip.mp3" id="5_ihl0d"]
 
 [node name="Root" type="Node2D"]
 script = ExtResource("1_oao7i")
@@ -68,3 +69,8 @@ offset_right = 344.0
 offset_bottom = 15.0
 theme_override_font_sizes/font_size = 65
 text = "Sdfasdfsfd"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ihl0d")
+autoplay = true
+parameters/looping = true

@@ -29,4 +29,7 @@ public partial class CustomSignals : Node
 	[Signal]
 	public delegate void ResetEventHandler();
 
+	[Signal]
+	public delegate void ToggleMusicEventHandler(bool on);
+
 }

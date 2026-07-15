@@ -9,6 +9,8 @@ public partial class Root : Node2D
 	Node2D _playScreen;
 	private Button _back;
 	private Label _score;
+
+	private float _musicPosition;
 	
 	public override void _Ready()
 	{
@@ -20,6 +22,38 @@ public partial class Root : Node2D
 		CustomSignals._Instance.StartLevel += StartLevel;
 		_back.Pressed += Reset;
 		CustomSignals._Instance.Reset += Reset;
+		CustomSignals._Instance.ToggleMusic += ToggleMusic;
+
+		AnimateButtons();
+	}
+
+	public void AnimateButtons()
+	{
+		foreach (Node button in Tools.GetChildren<Button>(this))
+		{
+			var currentPosition = ((Button)button).Position;
+			var tween = CreateTween();
+			tween.TweenProperty(button, "position", currentPosition + Vector2.Left*3, .5);
+			tween.TweenProperty(button, "position", currentPosition + Vector2.Right*3, 1);
+			tween.TweenProperty(button, "position", currentPosition, .5);
+		}
+		
+		foreach (Node button in Tools.GetChildren<Card>(this))
+		{
+			var currentPosition = ((Card)button).Position;
+			var tween = CreateTween();
+			tween.TweenProperty(button, "position", currentPosition + Vector2.Left*20, .5);
+			tween.TweenProperty(button, "position", currentPosition + Vector2.Right*20, 1);
+			tween.TweenProperty(button, "position", currentPosition, .5);
+		}
+
+		CreateTween().TweenCallback(Callable.From(AnimateButtons)).SetDelay(2);
+	}
+
+	public void ToggleMusic(bool on)
+	{
+		var player = GetNode<AudioStreamPlayer2D>("AudioStreamPlayer2D");
+		player.StreamPaused = !on;
 	}
 
 	public override void _Process(double delta)

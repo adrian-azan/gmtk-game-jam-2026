@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfaux4s65mmk1"]
+[gd_scene load_steps=10 format=3 uid="uid://dfaux4s65mmk1"]
 
 [ext_resource type="Script" uid="uid://dpu2c20mqb3j0" path="res://CODE/Card.cs" id="1_ldbxv"]
 [ext_resource type="Texture2D" uid="uid://bsn27rj8msn1k" path="res://ART/Card-Designs/png files/Card Faces/Clubs/C-1-Card.png" id="1_xy7wn"]
@@ -6,6 +6,16 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_haq2o"]
 size = Vector2(568, 805)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g574b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iqe4t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c1mp8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_crsl3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ldbxv"]
 
 [node name="Card" type="Node2D"]
 script = ExtResource("1_ldbxv")
@@ -33,6 +43,11 @@ offset_right = 305.0
 offset_bottom = 400.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g574b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_iqe4t")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_c1mp8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_crsl3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ldbxv")
 flat = true
 
 [node name="Label" type="Label" parent="."]

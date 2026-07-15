@@ -60,3 +60,12 @@ offset_bottom = -275.0
 scale = Vector2(2.815, 2.815)
 text = "Exit
 "
+
+[node name="CheckButton" type="CheckButton" parent="."]
+offset_left = -534.0
+offset_top = -350.0
+offset_right = -437.0
+offset_bottom = -278.0
+scale = Vector2(2.055, 2.055)
+button_pressed = true
+text = "Music"
