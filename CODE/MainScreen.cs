@@ -3,18 +3,21 @@ using System;
 
 public partial class MainScreen : Node2D
 {
-	private Button _start;
 	private Button _levelSelect;
 	private Button _exit;
 	
 	
 	public override void _Ready()
 	{
-		_start = GetNode<Button>("Start");
 		_levelSelect = GetNode<Button>("Level Select");
 		_exit = GetNode<Button>("Exit");
+		foreach (Button child in _levelSelect.GetChildren())
+		{
+			child.Scale = Vector2.Zero;
+		}
 		
-		_start.Pressed += () => {CustomSignals._Instance.EmitSignal(CustomSignals.SignalName.StartLevel, 0);};
+
+		_exit.Pressed += () => { GetTree().Quit(); };
 		_levelSelect.Pressed += () =>
 		{
 			if (_levelSelect.GetChild<Button>(1).Scale != Vector2.One)
@@ -41,9 +44,5 @@ public partial class MainScreen : Node2D
 				CustomSignals._Instance.EmitSignal(CustomSignals.SignalName.StartLevel, Int32.Parse(child.Text) - 1);
 			};
 		}
-	}
-
-	public override void _Process(double delta)
-	{
 	}
 }

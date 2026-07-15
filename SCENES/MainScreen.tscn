@@ -2,66 +2,53 @@
 
 [node name="MainScreen" type="Node2D"]
 
-[node name="Start" type="Button" parent="."]
-offset_left = -77.000015
-offset_top = -16.000002
-offset_right = -31.000015
-offset_bottom = 14.999998
-scale = Vector2(3.325, 3.325)
-text = "Start"
-
 [node name="Level Select" type="Button" parent="."]
 offset_left = -192.0
-offset_top = 131.0
+offset_top = -7.0
 offset_right = -93.0
-offset_bottom = 162.0
+offset_bottom = 24.0
 scale = Vector2(3.85, 3.85)
 text = "Level Select
 "
 
 [node name="Button" type="Button" parent="Level Select"]
 layout_mode = 0
-offset_left = -38.44156
-offset_top = -36.883118
-offset_right = -20.441559
-offset_bottom = -5.8831177
-scale = Vector2(1e-05, 1e-05)
+offset_left = -43.896103
+offset_top = -37.14286
+offset_right = -25.896103
+offset_bottom = -6.1428604
 text = "1"
 
 [node name="Button2" type="Button" parent="Level Select"]
 layout_mode = 0
-offset_left = -4.1558456
-offset_top = -83.376625
-offset_right = 13.844154
-offset_bottom = -52.376625
-scale = Vector2(1e-05, 1e-05)
+offset_left = -2.8571448
+offset_top = -38.18182
+offset_right = 15.142855
+offset_bottom = -7.18182
 text = "2"
 
 [node name="Button3" type="Button" parent="Level Select"]
 layout_mode = 0
-offset_left = 43.116882
-offset_top = -116.1039
-offset_right = 61.116882
-offset_bottom = -85.1039
-scale = Vector2(1e-05, 1e-05)
+offset_left = 37.66234
+offset_top = -38.181816
+offset_right = 55.66234
+offset_bottom = -7.181816
 text = "3"
 
 [node name="Button4" type="Button" parent="Level Select"]
 layout_mode = 0
-offset_left = 91.68831
-offset_top = -82.597404
-offset_right = 109.68831
-offset_bottom = -51.597404
-scale = Vector2(1e-05, 1e-05)
+offset_left = 78.181816
+offset_top = -38.18182
+offset_right = 96.181816
+offset_bottom = -7.18182
 text = "4"
 
 [node name="Button5" type="Button" parent="Level Select"]
 layout_mode = 0
-offset_left = 132.46753
-offset_top = -36.62338
-offset_right = 150.46753
-offset_bottom = -5.6233788
-scale = Vector2(1e-05, 1e-05)
+offset_left = 119.22079
+offset_top = -38.18182
+offset_right = 137.2208
+offset_bottom = -7.18182
 text = "5
 "
 

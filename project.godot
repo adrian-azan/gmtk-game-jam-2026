@@ -18,6 +18,12 @@ config/icon="res://icon.svg"
 [autoload]
 
 CustomSignals="*res://CODE/TOOLS/CustomSignals.cs"
+Globals="*res://CODE/Globals.cs"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [dotnet]
 

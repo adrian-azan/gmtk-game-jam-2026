@@ -36,6 +36,7 @@ grow_vertical = 2
 flat = true
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = -191.0
 offset_top = -396.0
 offset_right = -151.0

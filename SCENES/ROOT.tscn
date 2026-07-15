@@ -19,35 +19,34 @@ scale = Vector2(0.415, 0.415)
 
 [node name="1" parent="LEVELS" instance=ExtResource("2_iyeps")]
 visible = false
-position = Vector2(-87.00002, -148.00002)
+position = Vector2(621.6867, -146.988)
 scale = Vector2(0.835, 0.835)
 _rows = 2
 
 [node name="2" parent="LEVELS" instance=ExtResource("2_iyeps")]
 visible = false
-position = Vector2(-349.72296, -143.81927)
-scale = Vector2(0.835, 0.835)
+position = Vector2(185.54211, -144.57835)
+scale = Vector2(0.832, 0.832)
 _rows = 2
 _columns = 3
 
 [node name="3" parent="LEVELS" instance=ExtResource("2_iyeps")]
 visible = false
-position = Vector2(-874.6987, -81.927734)
-scale = Vector2(0.67, 0.67)
-_rows = 2
-_columns = 6
+position = Vector2(245.78308, -301.2049)
+scale = Vector2(0.599, 0.599)
+_columns = 4
 
 [node name="4" parent="LEVELS" instance=ExtResource("2_iyeps")]
 visible = false
-position = Vector2(-983.1323, -12.048218)
-scale = Vector2(0.529, 0.529)
-_rows = 2
-_columns = 8
+position = Vector2(546.9879, -354.21692)
+scale = Vector2(0.443, 0.443)
+_rows = 4
+_columns = 4
 
 [node name="5" parent="LEVELS" instance=ExtResource("2_iyeps")]
 visible = false
-position = Vector2(-932.5298, -361.44604)
-scale = Vector2(0.444, 0.444)
+position = Vector2(-597.59045, -310.8434)
+scale = Vector2(0.401, 0.401)
 _rows = 4
 _columns = 9
 
@@ -59,3 +58,13 @@ offset_right = -502.0
 offset_bottom = -283.0
 scale = Vector2(2.265, 2.265)
 text = "Back"
+
+[node name="Score" type="Label" parent="."]
+visible = false
+z_index = 155
+offset_left = -572.0
+offset_top = -233.0
+offset_right = 344.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 65
+text = "Sdfasdfsfd"

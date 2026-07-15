@@ -8,3 +8,5 @@ _rows = 3
 _columns = 2
 _rowBuffer = 50
 _columnBuffer = 50
+
+[node name="Cards" type="Node2D" parent="."]

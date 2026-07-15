@@ -28,22 +28,21 @@ public partial class PlayScreen : Node2D
 	private int _rowBuffer;
 	[Export]
 	private int _columnBuffer;
-
 	
 	public override void _Ready()
 	{
 		_firstSelectedCard = null;
 		_secondSelectedCard = null;
+		
 		SetScene();
 		
 		CustomSignals._Instance.CheckCards += CheckCards;
 	}
 
 
-
 	public void SetScene()
 	{
-		foreach (var child in GetChildren())
+		foreach (Node2D child in GetNode("Cards").GetChildren())
 		{
 			child.QueueFree();
 		}
@@ -52,6 +51,7 @@ public partial class PlayScreen : Node2D
 		_cards.Clear();
 		_firstSelectedCard = null;
 		_secondSelectedCard = null;
+		Globals.SCORE = 0;
 		
 		for (int i = 0; i < _columns; i++)
 		{
@@ -59,11 +59,11 @@ public partial class PlayScreen : Node2D
 			{
 				Card newCard = _cardScene.Instantiate<Card>();
 				_cards.Add(newCard);
-				AddChild(newCard);
+				GetNode("Cards").AddChild(newCard);
 				
 				
 				var remoteTransform = new RemoteTransform2D();
-				AddChild(remoteTransform);
+				GetNode("Cards").AddChild(remoteTransform);
 				remoteTransform.Position = new Vector2(i*(newCard.GetChild<Sprite2D>(0).Texture.GetSize().X + _columnBuffer), 
 					j*(newCard.GetChild<Sprite2D>(0).Texture.GetSize().Y + _rowBuffer));
 			
@@ -79,7 +79,7 @@ public partial class PlayScreen : Node2D
 
 	public void CheckCards(Card selectedCard)
 	{
-		if (_firstSelectedCard == selectedCard)
+		if (_firstSelectedCard == selectedCard || Visible == false)
 			return;
 		
 		if (_firstSelectedCard == null)
@@ -89,10 +89,11 @@ public partial class PlayScreen : Node2D
 		else if (_secondSelectedCard == null)
 		{
 			CustomSignals._Instance.EmitSignal(CustomSignals.SignalName.LockCards, true);
+			Globals.SCORE += 1;
 			
 			_secondSelectedCard = selectedCard;
 
-			if (_firstSelectedCard.key == _secondSelectedCard.key)
+			if (_firstSelectedCard != null && _firstSelectedCard.key == _secondSelectedCard.key)
 			{
 				_inAnimation = CreateTween();
 				_inAnimation.TweenCallback(Callable.From(() =>
@@ -103,9 +104,7 @@ public partial class PlayScreen : Node2D
 					_firstSelectedCard = null;
 					_secondSelectedCard = null;
 					
-					Logging.PrintTemp(GetChildren().Where(n => n is Card).Count().ToString());
-					
-					if (GetChildren().Where(n => n is Card).Count() == 2)
+					if (GetNode("Cards").GetChildren().Where(n => n is Card).Count() == 2)
 					{
 						CustomSignals._Instance.EmitSignal(CustomSignals.SignalName.Reset);
 					}
