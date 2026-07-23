@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlcu27m5x7mlv"
-path="res://.godot/imported/xbox_style1.png-bec2a16cd0908abb8146a31d42a5d6a6.ctex"
+uid="uid://dgymqx881bxf8"
+path="res://.godot/imported/Clock.png-a6a0d8c1f20f1854eb7b422d11eee1db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ART/Cryo's Mini GUI Controller/xbox_style1.png"
-dest_files=["res://.godot/imported/xbox_style1.png-bec2a16cd0908abb8146a31d42a5d6a6.ctex"]
+source_file="res://ART/Sprite Sheets/Clock.png"
+dest_files=["res://.godot/imported/Clock.png-a6a0d8c1f20f1854eb7b422d11eee1db.ctex"]
 
 [params]
 
