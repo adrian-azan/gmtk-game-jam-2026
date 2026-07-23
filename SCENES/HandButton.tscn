@@ -7,6 +7,23 @@
 script = ExtResource("1_bw0qj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(376, 277)
 sprite_frames = ExtResource("1_6ry04")
-frame = 11
+frame = 6
+
+[node name="Label" type="Label" parent="."]
+offset_left = 122.0
+offset_top = -322.0
+offset_right = 277.0
+offset_bottom = -136.0
+theme_override_font_sizes/font_size = 136
+text = "33"
+
+[node name="Debug" type="Label" parent="."]
+offset_left = -1494.0
+offset_top = -72.0
+offset_right = -1339.0
+offset_bottom = 114.0
+theme_override_font_sizes/font_size = 136
+text = "33"
+
+[node name="Timer" type="Timer" parent="."]

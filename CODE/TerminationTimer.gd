@@ -1,3 +1,4 @@
+class_name TerminationTimer
 extends Node2D
 
 var time: int
@@ -12,6 +13,10 @@ func _ready() -> void:
 	time = 28800
 	decayRate = time / totalTimeSeconds
 	
+	var hand = get_node("../HandButton") as HandButton
+	if hand != null:
+		hand.timeAdded.connect(AddTime)
+	
 
 func _process(delta: float) -> void:
 	var times = CalculateTime()
@@ -23,6 +28,9 @@ func _process(delta: float) -> void:
 
 	time -= decayRate * delta
 	
+
+func AddTime(amountInSeconds: int) -> void:
+	time += amountInSeconds 
 
 func CalculateTime() -> Dictionary:
 	var times = {}

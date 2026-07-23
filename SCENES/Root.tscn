@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdtlimp3d1pgk"]
+[gd_scene load_steps=5 format=3 uid="uid://cdtlimp3d1pgk"]
 
 [ext_resource type="PackedScene" uid="uid://bflos3e4ovdbb" path="res://SCENES/TerminationTimer.tscn" id="1_0ga8e"]
 [ext_resource type="PackedScene" uid="uid://dno7wil2r4pif" path="res://SCENES/Player.tscn" id="2_kdmbq"]
 [ext_resource type="PackedScene" uid="uid://djj63l26w56bg" path="res://SCENES/HandButton.tscn" id="3_fvsdy"]
+[ext_resource type="PackedScene" uid="uid://bndlc0ddflyl0" path="res://SCENES/Store.tscn" id="4_q2mr4"]
 
 [node name="Root" type="Node2D"]
 
@@ -12,5 +13,8 @@
 position = Vector2(572, 328)
 
 [node name="HandButton" parent="." instance=ExtResource("3_fvsdy")]
-position = Vector2(418, 120)
+position = Vector2(471.00003, 183)
 scale = Vector2(0.21, 0.21)
+
+[node name="Store" parent="." instance=ExtResource("4_q2mr4")]
+position = Vector2(544, 121)

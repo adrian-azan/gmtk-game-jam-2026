@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://bndlc0ddflyl0"]
+
+[ext_resource type="Script" uid="uid://bxrbys4r2olma" path="res://CODE/Store.gd" id="1_15i0r"]
+
+[node name="Store" type="Node2D"]
+script = ExtResource("1_15i0r")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 25
+columns = 2
+
+[node name="Queue" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Bigger 
+Queue"
+
+[node name="Fiver" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Fiver 
+Contractor"
+
+[node name="Processing" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Increase 
+Token"
+
+[node name="Sabatoge" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Sabotage
+Coworker"
