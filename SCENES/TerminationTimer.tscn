@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bflos3e4ovdbb"]
+
+[ext_resource type="Script" uid="uid://ds1kifegobm2r" path="res://CODE/TerminationTimer.gd" id="1_7ky2r"]
+
+[node name="TerminationTimer" type="Node2D"]
+script = ExtResource("1_7ky2r")
+totalTimeSeconds = 300
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 203.0
+offset_bottom = 78.0
+theme_override_font_sizes/normal_font_size = 42
+text = "00:00:00"

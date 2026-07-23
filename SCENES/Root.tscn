@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdtlimp3d1pgk"]
+
+[ext_resource type="PackedScene" uid="uid://bflos3e4ovdbb" path="res://SCENES/TerminationTimer.tscn" id="1_0ga8e"]
+
+[node name="Root" type="Node2D"]
+
+[node name="TerminationTimer" parent="." instance=ExtResource("1_0ga8e")]
