@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://c5pvo2awrb0l3"]
+
+[ext_resource type="Texture2D" uid="uid://cbpyyb8d307bf" path="res://ART/Assets/Person-At-Desk-No-Screen.png" id="1_khacl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1p1x1"]
+atlas = ExtResource("1_khacl")
+region = Rect2(0, 0, 565, 607)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_755or"]
+atlas = ExtResource("1_khacl")
+region = Rect2(565, 0, 565, 607)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gd74i"]
+atlas = ExtResource("1_khacl")
+region = Rect2(1130, 0, 565, 607)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3rbr"]
+atlas = ExtResource("1_khacl")
+region = Rect2(1695, 0, 565, 607)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0v3h"]
+atlas = ExtResource("1_khacl")
+region = Rect2(2260, 0, 565, 607)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1p1x1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_755or")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gd74i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3rbr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0v3h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

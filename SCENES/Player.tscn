@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dno7wil2r4pif"]
+
+[ext_resource type="SpriteFrames" uid="uid://c5pvo2awrb0l3" path="res://ART/Sprite Sheets/Player_SpriteSheet.tres" id="1_esb2h"]
+
+[node name="Player" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_esb2h")
