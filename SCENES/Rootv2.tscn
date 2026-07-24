@@ -1,0 +1,93 @@
+[gd_scene load_steps=10 format=3 uid="uid://eygkk4o7r8ld"]
+
+[ext_resource type="Script" uid="uid://8sii10mj860f" path="res://SCENES/RootController.gd" id="1_hh2k8"]
+[ext_resource type="PackedScene" uid="uid://bflos3e4ovdbb" path="res://SCENES/TerminationTimer.tscn" id="2_ul883"]
+[ext_resource type="PackedScene" uid="uid://dno7wil2r4pif" path="res://SCENES/Player.tscn" id="3_8huvc"]
+[ext_resource type="PackedScene" uid="uid://djj63l26w56bg" path="res://SCENES/HandButton.tscn" id="4_jkyod"]
+[ext_resource type="PackedScene" uid="uid://bndlc0ddflyl0" path="res://SCENES/Store.tscn" id="5_dsevw"]
+[ext_resource type="Script" uid="uid://dnn11by3eco6k" path="res://SCENES/PlayerCamera.gd" id="6_aqh14"]
+
+[sub_resource type="Animation" id="Animation_hrorf"]
+resource_name = "ToStore"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(3.635, 3.635)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(576, 322), Vector2(591, 189)]
+}
+
+[sub_resource type="Animation" id="Animation_ek2ui"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(591, 189)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4fbj0"]
+_data = {
+&"RESET": SubResource("Animation_ek2ui"),
+&"ToStore": SubResource("Animation_hrorf")
+}
+
+[node name="Root" type="Node2D"]
+script = ExtResource("1_hh2k8")
+
+[node name="TerminationTimer" parent="." instance=ExtResource("2_ul883")]
+texture_filter = 1
+
+[node name="Player" parent="." instance=ExtResource("3_8huvc")]
+position = Vector2(572, 328)
+
+[node name="HandButton" parent="." instance=ExtResource("4_jkyod")]
+position = Vector2(471.00003, 183)
+scale = Vector2(0.21, 0.21)
+
+[node name="Store" parent="." instance=ExtResource("5_dsevw")]
+position = Vector2(544, 121)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(591, 189)
+script = ExtResource("6_aqh14")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4fbj0")
+}

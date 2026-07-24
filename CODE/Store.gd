@@ -1,4 +1,5 @@
 @tool
+class_name Store
 extends Node2D
 
 var queueAmount: int
@@ -23,7 +24,14 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-	
+
+func ShowStore() -> void:
+	create_tween().tween_property($GridContainer, "modulate", Color(1,1,1,1), .8)
+
+
+func HideStore() -> void:
+	create_tween().tween_property($GridContainer, "modulate", Color(1,1,1,0), .8)
+
 func PurchaseBiggerQueue():
 	if queueAmount <= 0:
 		return

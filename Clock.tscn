@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://dig3843k2g1dq"]
+[gd_scene load_steps=67 format=3 uid="uid://snpbov0fhsmi"]
 
 [ext_resource type="Texture2D" uid="uid://dgymqx881bxf8" path="res://ART/Sprite Sheets/Clock.png" id="1_7u8sl"]
 
@@ -464,4 +464,4 @@ animations = [{
 texture_filter = 1
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_jec8j")
-frame_progress = 0.82035
+frame = 16

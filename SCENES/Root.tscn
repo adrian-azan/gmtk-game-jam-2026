@@ -1,14 +1,78 @@
-[gd_scene load_steps=5 format=3 uid="uid://cdtlimp3d1pgk"]
+[gd_scene load_steps=10 format=3 uid="uid://cdtlimp3d1pgk"]
 
 [ext_resource type="PackedScene" uid="uid://bflos3e4ovdbb" path="res://SCENES/TerminationTimer.tscn" id="1_0ga8e"]
+[ext_resource type="Script" uid="uid://8sii10mj860f" path="res://SCENES/RootController.gd" id="1_hrorf"]
 [ext_resource type="PackedScene" uid="uid://dno7wil2r4pif" path="res://SCENES/Player.tscn" id="2_kdmbq"]
 [ext_resource type="PackedScene" uid="uid://djj63l26w56bg" path="res://SCENES/HandButton.tscn" id="3_fvsdy"]
 [ext_resource type="PackedScene" uid="uid://bndlc0ddflyl0" path="res://SCENES/Store.tscn" id="4_q2mr4"]
+[ext_resource type="Script" uid="uid://dnn11by3eco6k" path="res://SCENES/PlayerCamera.gd" id="6_ek2ui"]
+
+[sub_resource type="Animation" id="Animation_ek2ui"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Person:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hrorf"]
+resource_name = "ToStore"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(3.635, 3.635)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(576, 322), Vector2(591, 189)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/Person:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.67),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4fbj0"]
+_data = {
+&"RESET": SubResource("Animation_ek2ui"),
+&"ToStore": SubResource("Animation_hrorf")
+}
 
 [node name="Root" type="Node2D"]
+script = ExtResource("1_hrorf")
 
 [node name="TerminationTimer" parent="." instance=ExtResource("1_0ga8e")]
 texture_filter = 1
+totalTimeSeconds = 30
 
 [node name="Player" parent="." instance=ExtResource("2_kdmbq")]
 position = Vector2(572, 328)
@@ -19,3 +83,14 @@ scale = Vector2(0.21, 0.21)
 
 [node name="Store" parent="." instance=ExtResource("4_q2mr4")]
 position = Vector2(544, 121)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 322)
+script = ExtResource("6_ek2ui")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4fbj0")
+}
+
+[editable path="Player"]

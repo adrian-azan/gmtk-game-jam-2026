@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dno7wil2r4pif"]
+[gd_scene load_steps=3 format=3 uid="uid://dno7wil2r4pif"]
 
-[ext_resource type="SpriteFrames" uid="uid://c5pvo2awrb0l3" path="res://ART/Sprite Sheets/Player_SpriteSheet.tres" id="1_esb2h"]
+[ext_resource type="Texture2D" uid="uid://degmro023f6tg" path="res://ART/Assets/Desk-PC.png" id="1_667t4"]
+[ext_resource type="Texture2D" uid="uid://cdxhyfg34d68m" path="res://ART/Sprite Sheets/Person-Chair.png" id="2_4cgft"]
 
 [node name="Player" type="Node2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = ExtResource("1_esb2h")
+[node name="Desk" type="Sprite2D" parent="."]
+texture = ExtResource("1_667t4")
+
+[node name="Person" type="Sprite2D" parent="."]
+texture = ExtResource("2_4cgft")
+hframes = 5
