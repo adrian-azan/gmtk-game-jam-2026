@@ -3,5 +3,6 @@ extends Node
 
 signal PurchaseBiggerQueue
 signal PurchaseFasterProcessing
-
+signal PurchaseContractor
+signal PurchaseSabatogeCoworker
 

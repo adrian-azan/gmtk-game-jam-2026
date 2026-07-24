@@ -5,6 +5,7 @@ extends Node2D
 var inputQueue: String
 var maxQueueSize: int
 var processingSpeed: float
+var passiveInput: int
 @onready var processInputTimer: Timer = $Timer
 
 signal timeAdded
@@ -20,6 +21,8 @@ func _ready() -> void:
 	
 	CustomSignals.PurchaseBiggerQueue.connect(PurchaseBiggerQueue)
 	CustomSignals.PurchaseFasterProcessing.connect(PurchaseFasterProcessing)
+	CustomSignals.PurchaseContractor.connect(PurchaseContractor)
+	CustomSignals.PurchaseSabatogeCoworker.connect(PurchaseSabatogeCoworker)
 
 
 func _process(delta: float) -> void:
@@ -49,13 +52,15 @@ func _process(delta: float) -> void:
 	
 	
 func DrawDebug() -> void:
-	($Debug as Label).text = "%s\n%f" % [maxQueueSize, processingSpeed] 
+	($Debug as Label).text = "%s\n%f\n%d" % [maxQueueSize, processingSpeed,passiveInput] 
 	
 func RemoveFromQueue() -> void:
 	if inputQueue.length() > 0:
 		handSprite.play()
 		inputQueue = inputQueue.erase(0)
 		timeAdded.emit(120)
+		
+	timeAdded.emit(passiveInput)
 
 
 func PurchaseBiggerQueue() -> void:
@@ -66,3 +71,9 @@ func PurchaseFasterProcessing() -> void:
 		return
 	processingSpeed -= .1
 	processInputTimer.start(processingSpeed)
+
+func PurchaseContractor() -> void:
+	passiveInput += 5
+	
+func PurchaseSabatogeCoworker() -> void:
+	timeAdded.emit(28800/2)
