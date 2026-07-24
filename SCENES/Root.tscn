@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://cdtlimp3d1pgk"]
 
 [ext_resource type="PackedScene" uid="uid://bflos3e4ovdbb" path="res://SCENES/TerminationTimer.tscn" id="1_0ga8e"]
-[ext_resource type="Script" uid="uid://8sii10mj860f" path="res://SCENES/RootController.gd" id="1_hrorf"]
+[ext_resource type="Script" uid="uid://8sii10mj860f" path="res://CODE/RootController.gd" id="1_hrorf"]
 [ext_resource type="PackedScene" uid="uid://dno7wil2r4pif" path="res://SCENES/Player.tscn" id="2_kdmbq"]
 [ext_resource type="PackedScene" uid="uid://djj63l26w56bg" path="res://SCENES/HandButton.tscn" id="3_fvsdy"]
 [ext_resource type="PackedScene" uid="uid://bndlc0ddflyl0" path="res://SCENES/Store.tscn" id="4_q2mr4"]
-[ext_resource type="Script" uid="uid://dnn11by3eco6k" path="res://SCENES/PlayerCamera.gd" id="6_ek2ui"]
+[ext_resource type="Script" uid="uid://dnn11by3eco6k" path="res://CODE/PlayerCamera.gd" id="6_ek2ui"]
 
 [sub_resource type="Animation" id="Animation_ek2ui"]
 length = 0.001

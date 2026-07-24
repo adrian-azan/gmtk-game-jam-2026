@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://eygkk4o7r8ld"]
 
-[ext_resource type="Script" uid="uid://8sii10mj860f" path="res://SCENES/RootController.gd" id="1_hh2k8"]
+[ext_resource type="Script" uid="uid://8sii10mj860f" path="res://CODE/RootController.gd" id="1_hh2k8"]
 [ext_resource type="PackedScene" uid="uid://bflos3e4ovdbb" path="res://SCENES/TerminationTimer.tscn" id="2_ul883"]
 [ext_resource type="PackedScene" uid="uid://dno7wil2r4pif" path="res://SCENES/Player.tscn" id="3_8huvc"]
 [ext_resource type="PackedScene" uid="uid://djj63l26w56bg" path="res://SCENES/HandButton.tscn" id="4_jkyod"]
 [ext_resource type="PackedScene" uid="uid://bndlc0ddflyl0" path="res://SCENES/Store.tscn" id="5_dsevw"]
-[ext_resource type="Script" uid="uid://dnn11by3eco6k" path="res://SCENES/PlayerCamera.gd" id="6_aqh14"]
+[ext_resource type="Script" uid="uid://dnn11by3eco6k" path="res://CODE/PlayerCamera.gd" id="6_aqh14"]
 
 [sub_resource type="Animation" id="Animation_hrorf"]
 resource_name = "ToStore"
