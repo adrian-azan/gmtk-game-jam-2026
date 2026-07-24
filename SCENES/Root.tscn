@@ -14,7 +14,7 @@ texture_filter = 1
 position = Vector2(572, 328)
 
 [node name="HandButton" parent="." instance=ExtResource("3_fvsdy")]
-position = Vector2(471.00003, 183)
+position = Vector2(471, 183)
 scale = Vector2(0.21, 0.21)
 
 [node name="Store" parent="." instance=ExtResource("4_q2mr4")]

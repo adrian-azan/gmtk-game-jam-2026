@@ -455,7 +455,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 10.0
+"speed": 8.0
 }]
 
 [node name="Clock" type="Node2D"]
@@ -464,5 +464,4 @@ animations = [{
 texture_filter = 1
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_jec8j")
-frame = 27
-frame_progress = 0.266414
+frame_progress = 0.82035
