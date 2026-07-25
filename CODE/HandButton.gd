@@ -7,6 +7,7 @@ var maxQueueSize: int
 var processingSpeed: float
 var passiveInput: int
 @onready var processInputTimer: Timer = $Timer
+@onready var buttonClick: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 signal timeAdded
 
@@ -57,6 +58,7 @@ func DrawDebug() -> void:
 func RemoveFromQueue() -> void:
 	if inputQueue.length() > 0:
 		handSprite.play()
+		buttonClick.play()
 		inputQueue = inputQueue.erase(0)
 		timeAdded.emit(120)
 		
