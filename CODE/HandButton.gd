@@ -3,6 +3,7 @@ extends Node2D
 
 @onready var handSprite: AnimatedSprite2D = $AnimatedSprite2D
 var inputQueue: String
+var fullReport: String
 var maxQueueSize: int
 var processingSpeed: float
 var passiveInput: int
@@ -56,11 +57,12 @@ func _process(delta: float) -> void:
 	
 func Reset():
 	inputQueue = ""
+	fullReport = ""
 	processInputTimer.start(processingSpeed)
 
 	
 func DrawDebug() -> void:
-	($Debug as Label).text = "%s\n%f\n%d" % [maxQueueSize, processingSpeed,passiveInput] 
+	($Debug as Label).text = "%s\n%f\n%d\n" % [maxQueueSize, processingSpeed,passiveInput] 
 	
 func RemoveFromQueue() -> void:
 	if paused:
@@ -69,6 +71,8 @@ func RemoveFromQueue() -> void:
 	if inputQueue.length() > 0:
 		handSprite.play()
 		buttonClick.play()
+		
+		fullReport = fullReport.insert(0, inputQueue[0])
 		inputQueue = inputQueue.erase(0)
 		timeAdded.emit(120)
 		

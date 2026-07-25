@@ -9,3 +9,4 @@ signal PurchaseSabatogeCoworker
 signal EndDay
 signal CheckEmail
 signal StartWorkDay
+signal OpenShop
