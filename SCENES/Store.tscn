@@ -14,27 +14,36 @@ columns = 2
 
 [node name="Queue" type="Button" parent="GridContainer"]
 layout_mode = 2
+disabled = true
 text = "Bigger 
 Queue"
 
 [node name="Fiver" type="Button" parent="GridContainer"]
 layout_mode = 2
+disabled = true
 text = "Fiver 
 Contractor"
 
 [node name="Processing" type="Button" parent="GridContainer"]
 layout_mode = 2
+disabled = true
 text = "Increase 
 Token"
 
 [node name="Sabatoge" type="Button" parent="GridContainer"]
 layout_mode = 2
+disabled = true
 text = "Sabotage
 Coworker"
 
 [node name="CheckEmail" type="Button" parent="."]
 offset_left = 200.0
-offset_top = 50.0
+offset_top = 103.0
 offset_right = 302.0
-offset_bottom = 81.0
+offset_bottom = 134.0
+disabled = true
 text = "Check Email"
+
+[node name="Coins" type="Node2D" parent="."]
+position = Vector2(207.99998, 13.999999)
+scale = Vector2(0.06, 0.06)

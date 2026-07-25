@@ -85,7 +85,7 @@ func PurchaseFasterProcessing() -> void:
 	processInputTimer.start(processingSpeed)
 
 func PurchaseContractor() -> void:
-	passiveInput += 5
+	passiveInput += 30
 	
 func PurchaseSabatogeCoworker() -> void:
 	timeAdded.emit(28800/2)

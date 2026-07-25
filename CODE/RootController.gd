@@ -25,6 +25,7 @@ func _process(delta: float) -> void:
 func EndOfDay():
 	handButton.paused = true
 	animationPlayer.play("ToStore")
+	store.EarnMoney(10)
 	store.ShowStore()
 	state = STATE.STORE
 
