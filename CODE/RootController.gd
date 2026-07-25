@@ -1,29 +1,40 @@
 extends Node2D
 
 
-enum STATE {WORKING, STORE}
+enum STATE {WORKING, STORE, EMAIL}
 
 var state: STATE
 
 @onready var animationPlayer: AnimationPlayer = $AnimationPlayer
 @onready var store = $Store
+@onready var email = $Email
 
 func _ready() -> void:
 	state = STATE.WORKING
+	
+	CustomSignals.EndDay.connect(EndOfDay)
+	CustomSignals.CheckEmail.connect(CheckEmail)
+	CustomSignals.StartWorkDay.connect(StartWorkDay)
 
 func _process(delta: float) -> void:
 	
 	if animationPlayer.is_playing():
 		return
 		
-	if Input.is_action_just_pressed("GoToDesktop"):
-		if state == STATE.WORKING:
-			animationPlayer.play("ToStore")
-			store.ShowStore()
-			state = STATE.STORE
-			
-			
-		elif state == STATE.STORE:
-			animationPlayer.play_backwards("ToStore")
-			store.HideStore()
-			state = STATE.WORKING
+func EndOfDay():
+	animationPlayer.play("ToStore")
+	store.ShowStore()
+	state = STATE.STORE
+
+func CheckEmail():
+	store.HideStore()
+	(email.get_node("AnimationPlayer") as AnimationPlayer).play("ShowEmail")
+	
+func StartWorkDay():
+	(email.get_node("AnimationPlayer") as AnimationPlayer).play("HideEmail")
+
+	$TerminationTimer.paused = false
+	$Clock.Reset()
+	animationPlayer.play_backwards("ToStore")
+	store.HideStore()
+	state = STATE.WORKING

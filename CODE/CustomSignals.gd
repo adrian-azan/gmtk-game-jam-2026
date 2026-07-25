@@ -6,3 +6,6 @@ signal PurchaseFasterProcessing
 signal PurchaseContractor
 signal PurchaseSabatogeCoworker
 
+signal EndDay
+signal CheckEmail
+signal StartWorkDay

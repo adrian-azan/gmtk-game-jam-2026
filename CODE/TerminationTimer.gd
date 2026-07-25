@@ -3,6 +3,7 @@ extends Node2D
 
 var time: int
 var decayRate: int
+var paused: bool
 @onready var timerLabel:RichTextLabel = $RichTextLabel
 
 @export var totalTimeSeconds: int
@@ -10,6 +11,7 @@ var decayRate: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	paused = false
 	time = 28800
 	decayRate = time / totalTimeSeconds
 	
@@ -17,8 +19,13 @@ func _ready() -> void:
 	if hand != null:
 		hand.timeAdded.connect(AddTime)
 	
+	CustomSignals.EndDay.connect(PauseTimer)
+	
 
 func _process(delta: float) -> void:
+	if paused:
+		return
+
 	var times = CalculateTime()
 	
 	if time > 0:
@@ -28,6 +35,9 @@ func _process(delta: float) -> void:
 
 	time -= decayRate * delta
 	
+
+func PauseTimer():
+	paused = true
 
 func AddTime(amountInSeconds: int) -> void:
 	time += amountInSeconds 

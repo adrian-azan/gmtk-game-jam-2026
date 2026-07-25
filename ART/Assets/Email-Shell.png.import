@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3s7noa51d8px"
-path="res://.godot/imported/grid_yellow_512x512.png-8a499bfc80ced7b09787e70fe1c0a693.ctex"
+uid="uid://3rb1qj0rj4di"
+path="res://.godot/imported/Email-Shell.png-411f2135997e19bfea5ef3518246c5e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ART/godot-prototype-texture/grid_512x512/grid_yellow_512x512.png"
-dest_files=["res://.godot/imported/grid_yellow_512x512.png-8a499bfc80ced7b09787e70fe1c0a693.ctex"]
+source_file="res://ART/Assets/Email-Shell.png"
+dest_files=["res://.godot/imported/Email-Shell.png-411f2135997e19bfea5ef3518246c5e2.ctex"]
 
 [params]
 

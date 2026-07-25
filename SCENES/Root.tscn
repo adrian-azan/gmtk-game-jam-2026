@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cdtlimp3d1pgk"]
+[gd_scene load_steps=12 format=3 uid="uid://cdtlimp3d1pgk"]
 
 [ext_resource type="PackedScene" uid="uid://bflos3e4ovdbb" path="res://SCENES/TerminationTimer.tscn" id="1_0ga8e"]
 [ext_resource type="Script" uid="uid://8sii10mj860f" path="res://CODE/RootController.gd" id="1_hrorf"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://djj63l26w56bg" path="res://SCENES/HandButton.tscn" id="3_fvsdy"]
 [ext_resource type="PackedScene" uid="uid://bndlc0ddflyl0" path="res://SCENES/Store.tscn" id="4_q2mr4"]
 [ext_resource type="Script" uid="uid://dnn11by3eco6k" path="res://CODE/PlayerCamera.gd" id="6_ek2ui"]
+[ext_resource type="PackedScene" uid="uid://snpbov0fhsmi" path="res://SCENES/Clock.tscn" id="7_ek2ui"]
+[ext_resource type="PackedScene" uid="uid://duhdgmy0i5nca" path="res://SCENES/Email.tscn" id="8_4fbj0"]
 
 [sub_resource type="Animation" id="Animation_ek2ui"]
 length = 0.001
@@ -20,6 +22,30 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Store:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.001),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Email:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.001),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_hrorf"]
@@ -60,6 +86,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HandButton:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.67),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4fbj0"]
 _data = {
@@ -72,7 +110,7 @@ script = ExtResource("1_hrorf")
 
 [node name="TerminationTimer" parent="." instance=ExtResource("1_0ga8e")]
 texture_filter = 1
-totalTimeSeconds = 30
+totalTimeSeconds = 120
 
 [node name="Player" parent="." instance=ExtResource("2_kdmbq")]
 position = Vector2(572, 328)
@@ -82,7 +120,8 @@ position = Vector2(471, 183)
 scale = Vector2(0.21, 0.21)
 
 [node name="Store" parent="." instance=ExtResource("4_q2mr4")]
-position = Vector2(544, 121)
+modulate = Color(1, 1, 1, 0)
+position = Vector2(441, 124)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 322)
@@ -93,4 +132,16 @@ libraries = {
 &"": SubResource("AnimationLibrary_4fbj0")
 }
 
+[node name="Clock" parent="." instance=ExtResource("7_ek2ui")]
+position = Vector2(999, 106)
+
+[node name="AnimatedSprite2D" parent="Clock" index="0"]
+frame = 0
+
+[node name="Email" parent="." instance=ExtResource("8_4fbj0")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(594.00006, 191)
+scale = Vector2(0.128, 0.128)
+
 [editable path="Player"]
+[editable path="Clock"]

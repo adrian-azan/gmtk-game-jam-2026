@@ -31,3 +31,10 @@ Token"
 layout_mode = 2
 text = "Sabotage
 Coworker"
+
+[node name="CheckEmail" type="Button" parent="."]
+offset_left = 200.0
+offset_top = 50.0
+offset_right = 302.0
+offset_bottom = 81.0
+text = "Check Email"

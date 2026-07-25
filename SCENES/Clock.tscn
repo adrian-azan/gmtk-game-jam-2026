@@ -1,6 +1,7 @@
-[gd_scene load_steps=67 format=3 uid="uid://snpbov0fhsmi"]
+[gd_scene load_steps=68 format=3 uid="uid://snpbov0fhsmi"]
 
 [ext_resource type="Texture2D" uid="uid://dgymqx881bxf8" path="res://ART/Sprite Sheets/Clock.png" id="1_7u8sl"]
+[ext_resource type="Script" uid="uid://wtg3o6dqsrc8" path="res://CODE/Clock.gd" id="1_jqa10"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ik47v"]
 atlas = ExtResource("1_7u8sl")
@@ -459,6 +460,7 @@ animations = [{
 }]
 
 [node name="Clock" type="Node2D"]
+script = ExtResource("1_jqa10")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

@@ -18,19 +18,21 @@ func _ready() -> void:
 	$GridContainer/Processing.button_down.connect(PurchaseFasterProcessing)
 	$GridContainer/Fiver.button_down.connect(PurchaseContractor)
 	$GridContainer/Sabatoge.button_down.connect(PurchaseSabatogeCoworker)
-	
+	$CheckEmail.button_down.connect(CheckEmail)
 	
 
 func _process(delta: float) -> void:
 	pass
 	
+func CheckEmail():
+	CustomSignals.CheckEmail.emit()
 
 func ShowStore() -> void:
-	create_tween().tween_property($GridContainer, "modulate", Color(1,1,1,1), .8)
+	create_tween().tween_property(self, "modulate", Color(1,1,1,1), .8)
 
 
 func HideStore() -> void:
-	create_tween().tween_property($GridContainer, "modulate", Color(1,1,1,0), .8)
+	create_tween().tween_property(self, "modulate", Color(1,1,1,0), .1)
 
 func PurchaseBiggerQueue():
 	if queueAmount <= 0:
