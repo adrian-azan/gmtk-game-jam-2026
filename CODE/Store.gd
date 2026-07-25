@@ -20,6 +20,8 @@ func _ready() -> void:
 	$GridContainer/Sabatoge.button_down.connect(PurchaseSabatogeCoworker)
 	$CheckEmail.button_down.connect(CheckEmail)
 	
+	HideStore()
+	
 
 func _process(delta: float) -> void:
 	pass
@@ -28,10 +30,20 @@ func CheckEmail():
 	CustomSignals.CheckEmail.emit()
 
 func ShowStore() -> void:
+	$GridContainer/Queue.disabled = false
+	$GridContainer/Processing.disabled = false
+	$GridContainer/Fiver.disabled = false
+	$GridContainer/Sabatoge.disabled = false
+	$CheckEmail.disabled = false
 	create_tween().tween_property(self, "modulate", Color(1,1,1,1), .8)
 
 
 func HideStore() -> void:
+	$GridContainer/Queue.disabled = true
+	$GridContainer/Processing.disabled = true
+	$GridContainer/Fiver.disabled = true
+	$GridContainer/Sabatoge.disabled = true
+	$CheckEmail.disabled = true
 	create_tween().tween_property(self, "modulate", Color(1,1,1,0), .1)
 
 func PurchaseBiggerQueue():

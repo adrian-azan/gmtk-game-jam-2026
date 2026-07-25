@@ -9,5 +9,6 @@
 texture = ExtResource("1_667t4")
 
 [node name="Person" type="Sprite2D" parent="."]
+z_index = 10
 texture = ExtResource("2_4cgft")
 hframes = 5

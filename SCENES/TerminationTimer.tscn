@@ -8,8 +8,8 @@ script = ExtResource("1_7ky2r")
 totalTimeSeconds = 300
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 203.0
-offset_bottom = 78.0
+offset_right = 243.0
+offset_bottom = 97.0
 theme_override_fonts/normal_font = ExtResource("2_sp5g3")
 theme_override_font_sizes/normal_font_size = 42
 text = "00:00:00"

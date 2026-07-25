@@ -110,6 +110,8 @@ script = ExtResource("1_hrorf")
 
 [node name="TerminationTimer" parent="." instance=ExtResource("1_0ga8e")]
 texture_filter = 1
+position = Vector2(19, 14)
+scale = Vector2(1.535, 1.535)
 totalTimeSeconds = 120
 
 [node name="Player" parent="." instance=ExtResource("2_kdmbq")]
@@ -139,7 +141,6 @@ position = Vector2(999, 106)
 frame = 0
 
 [node name="Email" parent="." instance=ExtResource("8_4fbj0")]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(594.00006, 191)
 scale = Vector2(0.128, 0.128)
 

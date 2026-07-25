@@ -9,10 +9,13 @@ var passiveInput: int
 @onready var processInputTimer: Timer = $Timer
 @onready var buttonClick: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
+var paused
+
 signal timeAdded
 
 
 func _ready() -> void:
+	paused = false
 	inputQueue = ""
 	maxQueueSize = 5
 	processingSpeed = .5
@@ -27,7 +30,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if inputQueue.length() >= maxQueueSize:
+	if inputQueue.length() >= maxQueueSize or paused:
 		return
 	
 	if Input.is_action_just_pressed("DoWork_1"):
@@ -51,11 +54,18 @@ func _process(delta: float) -> void:
 	$Label.text = str(inputQueue)
 	DrawDebug()
 	
+func Reset():
+	inputQueue = ""
+	processInputTimer.start(processingSpeed)
+
 	
 func DrawDebug() -> void:
 	($Debug as Label).text = "%s\n%f\n%d" % [maxQueueSize, processingSpeed,passiveInput] 
 	
 func RemoveFromQueue() -> void:
+	if paused:
+		return
+
 	if inputQueue.length() > 0:
 		handSprite.play()
 		buttonClick.play()

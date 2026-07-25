@@ -8,6 +8,7 @@ var state: STATE
 @onready var animationPlayer: AnimationPlayer = $AnimationPlayer
 @onready var store = $Store
 @onready var email = $Email
+@onready var handButton: HandButton = $HandButton
 
 func _ready() -> void:
 	state = STATE.WORKING
@@ -22,6 +23,7 @@ func _process(delta: float) -> void:
 		return
 		
 func EndOfDay():
+	handButton.paused = true
 	animationPlayer.play("ToStore")
 	store.ShowStore()
 	state = STATE.STORE
@@ -33,6 +35,8 @@ func CheckEmail():
 func StartWorkDay():
 	(email.get_node("AnimationPlayer") as AnimationPlayer).play("HideEmail")
 
+	handButton.paused = false
+	handButton.Reset()
 	$TerminationTimer.paused = false
 	$Clock.Reset()
 	animationPlayer.play_backwards("ToStore")
