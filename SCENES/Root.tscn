@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cdtlimp3d1pgk"]
+[gd_scene load_steps=21 format=3 uid="uid://cdtlimp3d1pgk"]
 
 [ext_resource type="PackedScene" uid="uid://bflos3e4ovdbb" path="res://SCENES/TerminationTimer.tscn" id="1_0ga8e"]
 [ext_resource type="Script" uid="uid://8sii10mj860f" path="res://CODE/RootController.gd" id="1_hrorf"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://nh0v8f0hmflj" path="res://SOUND/SFX/Email-Sound.mp3" id="14_3k53u"]
 [ext_resource type="AudioStream" uid="uid://snstejmt3wk" path="res://SOUND/SFX/EOD-Option-2.mp3" id="15_h78qc"]
 [ext_resource type="Texture2D" uid="uid://cpdoqa2qhb8ta" path="res://ART/Assets/Fired-Letter.png" id="16_fpadg"]
+[ext_resource type="AudioStream" uid="uid://xayi7oqfsog7" path="res://ART/Assets/Yell.mp3" id="16_h1bbl"]
 
 [sub_resource type="Animation" id="Animation_ek2ui"]
 length = 0.001
@@ -135,7 +136,7 @@ text = "Termination Timer"
 texture_filter = 1
 position = Vector2(19, 49)
 scale = Vector2(1.535, 1.535)
-totalTimeSeconds = 60
+totalTimeSeconds = 20
 
 [node name="Player" parent="." instance=ExtResource("2_kdmbq")]
 position = Vector2(572, 328)
@@ -186,6 +187,10 @@ stream = ExtResource("14_3k53u")
 [node name="EODSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_h78qc")
 volume_db = -15.0
+
+[node name="GameOver" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_h1bbl")
+volume_db = 12.784
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 visible = false

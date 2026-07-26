@@ -31,6 +31,7 @@ func MistakeMade():
 	turnRed.tween_property($Player/Desk, "self_modulate",Color(1,1,1,1),.5)
 	
 func GameOver():
+	$GameOver.play()
 	$Sprite2D2.visible = true
 	dayTimer.frameProgressionTimer.paused = true
 	handButton.paused = true
