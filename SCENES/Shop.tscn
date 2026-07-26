@@ -45,5 +45,5 @@ disabled = true
 text = "Check Email"
 
 [node name="Coins" type="Node2D" parent="."]
-position = Vector2(207.99998, 13.999999)
+position = Vector2(208, 14)
 scale = Vector2(0.06, 0.06)

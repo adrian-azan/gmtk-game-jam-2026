@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cdtlimp3d1pgk"]
+[gd_scene load_steps=17 format=3 uid="uid://cdtlimp3d1pgk"]
 
 [ext_resource type="PackedScene" uid="uid://bflos3e4ovdbb" path="res://SCENES/TerminationTimer.tscn" id="1_0ga8e"]
 [ext_resource type="Script" uid="uid://8sii10mj860f" path="res://CODE/RootController.gd" id="1_hrorf"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://snpbov0fhsmi" path="res://SCENES/Clock.tscn" id="7_ek2ui"]
 [ext_resource type="PackedScene" uid="uid://duhdgmy0i5nca" path="res://SCENES/Email.tscn" id="8_4fbj0"]
 [ext_resource type="PackedScene" uid="uid://jimn8dd0e2vn" path="res://SCENES/EndOfDayReport.tscn" id="9_1oaoh"]
+[ext_resource type="AudioStream" uid="uid://bu1bkod3g0nm5" path="res://SOUND/MUSIC/Main-Theme.mp3" id="12_r708p"]
+[ext_resource type="AudioStream" uid="uid://bj0x5uc700noe" path="res://SOUND/MUSIC/Main-Theme-No-Drums.mp3" id="13_3k53u"]
 
 [sub_resource type="Animation" id="Animation_ek2ui"]
 length = 0.001
@@ -165,6 +167,14 @@ script = ExtResource("6_ek2ui")
 libraries = {
 &"": SubResource("AnimationLibrary_4fbj0")
 }
+
+[node name="WorkMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_r708p")
+parameters/looping = true
+
+[node name="ShopMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_3k53u")
+parameters/looping = true
 
 [editable path="Player"]
 [editable path="Clock"]

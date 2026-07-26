@@ -13,6 +13,7 @@ extends Node2D
 
 func _ready() -> void:
 
+	$WorkMusic.play()
 	shop.money = 0
 	CustomSignals.EndDay.connect(EndOfDay)
 	CustomSignals.CheckEmail.connect(CheckEmail)
@@ -30,6 +31,8 @@ func MistakeMade():
 func EndOfDay():
 	terminationTimer.paused = true
 	handButton.paused = true
+	$WorkMusic.stream_paused = true
+	$ShopMusic.play()
 	animationPlayer.play("ToMonitor")
 	endOfDayReport.Show()
 	OutputChecker.dayCount += 1
@@ -55,6 +58,8 @@ func CheckEmail():
 	email.Show()
 		
 func StartWorkDay():
+	$ShopMusic.stream_paused = true
+	$WorkMusic.play()
 	email.Hide()
 	OutputChecker.mistakes = 0
 	OutputChecker.patternCounter = 0
