@@ -32,22 +32,19 @@ func EndOfDay():
 	handButton.paused = true
 	animationPlayer.play("ToMonitor")
 	endOfDayReport.Show()
-	
-	var formattedReport = OutputChecker.Check(handButton.fullReport)
-	
+	OutputChecker.dayCount += 1
+
 	if OutputChecker.dayCount <= 5:	
 		var content = JSON.parse_string(FileAccess.get_file_as_string("res://ART/EMAILS/Day%d.txt" % OutputChecker.dayCount))
-		email.SetText(content["content"])
+		email.SetText(content["content"], content["subject"])
 	else:
-		email.SetText("...")
+		email.SetText("...", ">:[")
 			
 	endOfDayReport.UpdateText()
 	
 	if 5 - OutputChecker.mistakes > 0:
 		shop.EarnMoney(5-OutputChecker.mistakes)
 	
-	
-	OutputChecker.dayCount += 1
 	
 func OpenShop():
 	endOfDayReport.Hide()
@@ -60,6 +57,7 @@ func CheckEmail():
 func StartWorkDay():
 	email.Hide()
 	OutputChecker.mistakes = 0
+	OutputChecker.patternCounter = 0
 
 	handButton.paused = false
 	terminationTimer.paused = false

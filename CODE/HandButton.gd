@@ -53,8 +53,8 @@ func _process(delta: float) -> void:
 		inputQueue += "D"	
 		
 	if Input.is_action_just_pressed("Backspace"):
-		if fullReport.length() != 0:
-			fullReport = fullReport.erase(fullReport.length()-1,1)
+		if inputQueue.length() != 0:
+			inputQueue = inputQueue.erase(inputQueue.length()-1,1)
 
 	$Label.text = str(inputQueue)
 	DrawDebug()
@@ -76,7 +76,7 @@ func RemoveFromQueue() -> void:
 		return
 
 	if inputQueue.length() > 0:
-		if OutputChecker.Check(fullReport + inputQueue[inputQueue.length()-1])[1] == 0:
+		if OutputChecker.Check(fullReport + inputQueue[0]) == 0:
 			handSprite.play()
 			buttonClick.play()
 			

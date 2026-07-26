@@ -7,7 +7,8 @@ func _ready() -> void:
 	$Sprite2D/EmailContent.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$Button.disabled = true
 
-func SetText(content: String):
+func SetText(content: String, subject: String):
+	$Sprite2D/SubjectContent.text = subject
 	$Sprite2D/EmailContent.text = content
 
 func CloseEmail():
