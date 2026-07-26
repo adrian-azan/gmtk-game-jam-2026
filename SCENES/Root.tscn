@@ -209,5 +209,17 @@ theme_override_fonts/font = ExtResource("2_0jmbu")
 theme_override_font_sizes/font_size = 27
 text = "w"
 
+[node name="Label2" type="Label" parent="."]
+texture_filter = 1
+offset_left = 19.0
+offset_top = 229.0
+offset_right = 408.0
+offset_bottom = 337.0
+theme_override_fonts/font = ExtResource("2_0jmbu")
+theme_override_font_sizes/font_size = 29
+text = "You can type with the following keys:
+WASD
+IJKL"
+
 [editable path="Player"]
 [editable path="Clock"]
