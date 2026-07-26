@@ -1,7 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cdtlimp3d1pgk"]
+[gd_scene load_steps=15 format=3 uid="uid://cdtlimp3d1pgk"]
 
 [ext_resource type="PackedScene" uid="uid://bflos3e4ovdbb" path="res://SCENES/TerminationTimer.tscn" id="1_0ga8e"]
 [ext_resource type="Script" uid="uid://8sii10mj860f" path="res://CODE/RootController.gd" id="1_hrorf"]
+[ext_resource type="FontFile" uid="uid://5en05qnevmgx" path="res://ART/Fonts/Jersey10-Regular.ttf" id="2_0jmbu"]
+[ext_resource type="Texture2D" uid="uid://dukjvwkebldkd" path="res://ART/Assets/GMTKGJ-BG.png" id="2_4pj4j"]
 [ext_resource type="PackedScene" uid="uid://dno7wil2r4pif" path="res://SCENES/Player.tscn" id="2_kdmbq"]
 [ext_resource type="PackedScene" uid="uid://djj63l26w56bg" path="res://SCENES/HandButton.tscn" id="3_fvsdy"]
 [ext_resource type="PackedScene" uid="uid://bndlc0ddflyl0" path="res://SCENES/Shop.tscn" id="4_q2mr4"]
@@ -109,9 +111,23 @@ _data = {
 [node name="Root" type="Node2D"]
 script = ExtResource("1_hrorf")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(604, 310)
+texture = ExtResource("2_4pj4j")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+texture_filter = 1
+offset_left = 19.0
+offset_top = 11.0
+offset_right = 346.0
+offset_bottom = 60.0
+theme_override_fonts/normal_font = ExtResource("2_0jmbu")
+theme_override_font_sizes/normal_font_size = 48
+text = "Termination Timer"
+
 [node name="TerminationTimer" parent="." instance=ExtResource("1_0ga8e")]
 texture_filter = 1
-position = Vector2(19, 14)
+position = Vector2(19, 49)
 scale = Vector2(1.535, 1.535)
 totalTimeSeconds = 60
 
@@ -133,7 +149,7 @@ position = Vector2(999, 106)
 frame = 0
 
 [node name="Email" parent="." instance=ExtResource("8_4fbj0")]
-position = Vector2(594.00006, 191)
+position = Vector2(594, 191)
 scale = Vector2(0.128, 0.128)
 
 [node name="EndOfDayReport" parent="." instance=ExtResource("9_1oaoh")]

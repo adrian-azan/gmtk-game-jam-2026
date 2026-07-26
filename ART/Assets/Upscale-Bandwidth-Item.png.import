@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlcu27m5x7mlv"
-path="res://.godot/imported/xbox_style1.png-bec2a16cd0908abb8146a31d42a5d6a6.ctex"
+uid="uid://n1ds1aslvlqk"
+path="res://.godot/imported/Upscale-Bandwidth-Item.png-f5afe7a65ea33a200bf9268ae8ef5e1b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ART/Cryo's Mini GUI Controller/xbox_style1.png"
-dest_files=["res://.godot/imported/xbox_style1.png-bec2a16cd0908abb8146a31d42a5d6a6.ctex"]
+source_file="res://ART/Assets/Upscale-Bandwidth-Item.png"
+dest_files=["res://.godot/imported/Upscale-Bandwidth-Item.png-f5afe7a65ea33a200bf9268ae8ef5e1b.ctex"]
 
 [params]
 

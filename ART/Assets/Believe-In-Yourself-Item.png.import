@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlcu27m5x7mlv"
-path="res://.godot/imported/xbox_style1.png-bec2a16cd0908abb8146a31d42a5d6a6.ctex"
+uid="uid://bqirjsu3xqty7"
+path="res://.godot/imported/Believe-In-Yourself-Item.png-e9e883ffbffe562d39f91ea56deb9388.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ART/Cryo's Mini GUI Controller/xbox_style1.png"
-dest_files=["res://.godot/imported/xbox_style1.png-bec2a16cd0908abb8146a31d42a5d6a6.ctex"]
+source_file="res://ART/Assets/Believe-In-Yourself-Item.png"
+dest_files=["res://.godot/imported/Believe-In-Yourself-Item.png-e9e883ffbffe562d39f91ea56deb9388.ctex"]
 
 [params]
 
