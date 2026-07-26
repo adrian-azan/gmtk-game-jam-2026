@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://djj63l26w56bg"]
+[gd_scene load_steps=6 format=3 uid="uid://djj63l26w56bg"]
 
 [ext_resource type="SpriteFrames" uid="uid://8abrndl85c2d" path="res://ART/Sprite Sheets/HandButton_SpriteSheet.tres" id="1_6ry04"]
 [ext_resource type="Script" uid="uid://disxihy6x0puj" path="res://CODE/HandButton.gd" id="1_bw0qj"]
 [ext_resource type="AudioStream" uid="uid://dw4efdknapso" path="res://SOUND/SFX/Button-Click.mp3" id="3_4o2fi"]
+[ext_resource type="FontFile" uid="uid://dhred57yvbx2g" path="res://ART/Fonts/Geo-Regular.ttf" id="3_i7kok"]
 [ext_resource type="AudioStream" uid="uid://b2uwgk341tiqs" path="res://SOUND/SFX/No-Sound.mp3" id="4_yoamw"]
 
 [node name="HandButton" type="Node2D"]
@@ -17,11 +18,13 @@ offset_left = 122.0
 offset_top = -322.0
 offset_right = 1119.0
 offset_bottom = 230.0
-theme_override_font_sizes/font_size = 136
+theme_override_fonts/font = ExtResource("3_i7kok")
+theme_override_font_sizes/font_size = 200
 text = "33"
 autowrap_mode = 1
 
 [node name="Debug" type="Label" parent="."]
+visible = false
 offset_left = -251.0
 offset_top = -863.0
 offset_right = -96.0
@@ -33,7 +36,8 @@ text = "33"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_4o2fi")
-volume_db = -3.0
+volume_db = -10.0
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_yoamw")
+volume_db = -6.0
