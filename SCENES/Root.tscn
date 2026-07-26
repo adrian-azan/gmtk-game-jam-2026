@@ -119,7 +119,7 @@ script = ExtResource("1_hrorf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(594, 320)
-scale = Vector2(0.36516204, 0.38898838)
+scale = Vector2(0.365162, 0.388988)
 texture = ExtResource("2_4pj4j")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -136,7 +136,7 @@ text = "Termination Timer"
 texture_filter = 1
 position = Vector2(19, 49)
 scale = Vector2(1.535, 1.535)
-totalTimeSeconds = 20
+totalTimeSeconds = 60
 
 [node name="Player" parent="." instance=ExtResource("2_kdmbq")]
 position = Vector2(572, 328)
@@ -156,6 +156,7 @@ position = Vector2(999, 106)
 frame = 0
 
 [node name="Email" parent="." instance=ExtResource("8_4fbj0")]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(594, 191)
 scale = Vector2(0.128, 0.128)
 

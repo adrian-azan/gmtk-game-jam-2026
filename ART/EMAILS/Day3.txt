@@ -5,7 +5,10 @@ It’s only once in a while that we find someone as committed to their work as y
 
 Anyways… we’ve got more work for you:
 
-Today’s Combo: Every 5th, 10th, 15th etc letter should be A 
+Today’s Combo:
+	
+Every 5th, 10th, 15th etc letter should be A 
+
 Every 6th, 12th, 18th etc Letter should be K
 
 Forever yours,

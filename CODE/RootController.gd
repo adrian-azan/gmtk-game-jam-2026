@@ -38,6 +38,7 @@ func GameOver():
 	
 		
 func EndOfDay():
+	$Label.hide()
 	$EODSound.play()
 	terminationTimer.paused = true
 	handButton.paused = true
@@ -82,6 +83,7 @@ func StartWorkDay():
 
 	handButton.paused = false
 	terminationTimer.paused = false
+	$Label.show()
 	
 	handButton.Reset()
 	dayTimer.Reset()

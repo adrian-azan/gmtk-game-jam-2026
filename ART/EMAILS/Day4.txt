@@ -7,7 +7,9 @@ We’re not quite sure what you’re doing, but you’re doing it at lightning s
 
 Here’s your slop:
 
-Today’s Combo: Every 4th, 8th, 12th etc Letter = K - Every 7th, 14th, etc Letter = S
+Today’s Combo:
+	
+Every 4th, 8th, 12th etc Letter = K - Every 7th, 14th, etc Letter = S
 ",
 "subject": "Oken Then"
 }
