@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdbwtoxqp2oqy"
-path="res://.godot/imported/Believe-In-Yourself-Item.png-e9e883ffbffe562d39f91ea56deb9388.ctex"
+uid="uid://cae256gjito17"
+path="res://.godot/imported/Ok-Button.png-5e47cb61c029a048aa00db641775ea62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ART/Assets/Believe-In-Yourself-Item.png"
-dest_files=["res://.godot/imported/Believe-In-Yourself-Item.png-e9e883ffbffe562d39f91ea56deb9388.ctex"]
+source_file="res://ART/Assets/Ok-Button.png"
+dest_files=["res://.godot/imported/Ok-Button.png-5e47cb61c029a048aa00db641775ea62.ctex"]
 
 [params]
 

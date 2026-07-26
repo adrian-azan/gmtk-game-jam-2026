@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://jimn8dd0e2vn"]
+[gd_scene load_steps=4 format=3 uid="uid://jimn8dd0e2vn"]
 
 [ext_resource type="Script" uid="uid://dat4wcm6fov2r" path="res://SCENES/EndOfDayReport.gd" id="1_eo7tm"]
 [ext_resource type="FontFile" uid="uid://dhred57yvbx2g" path="res://ART/Fonts/Geo-Regular.ttf" id="2_fh8bn"]
+[ext_resource type="Texture2D" uid="uid://cae256gjito17" path="res://ART/Assets/Ok-Button.png" id="3_ofodv"]
 
 [node name="EndOfDayReport" type="Node2D"]
 script = ExtResource("1_eo7tm")
@@ -21,8 +22,8 @@ offset_left = 799.0
 offset_top = 364.0
 offset_right = 846.0
 offset_bottom = 395.0
-scale = Vector2(1.955, 1.955)
-text = "Shop"
+scale = Vector2(0.875, 0.875)
+icon = ExtResource("3_ofodv")
 
 [node name="Mistakes" type="Label" parent="."]
 offset_left = 786.0

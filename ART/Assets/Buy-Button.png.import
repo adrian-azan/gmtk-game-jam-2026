@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdbwtoxqp2oqy"
-path="res://.godot/imported/Believe-In-Yourself-Item.png-e9e883ffbffe562d39f91ea56deb9388.ctex"
+uid="uid://dpnq4mgaar0nu"
+path="res://.godot/imported/Buy-Button.png-0301ce4d98006b311af225e7bcd91a4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ART/Assets/Believe-In-Yourself-Item.png"
-dest_files=["res://.godot/imported/Believe-In-Yourself-Item.png-e9e883ffbffe562d39f91ea56deb9388.ctex"]
+source_file="res://ART/Assets/Buy-Button.png"
+dest_files=["res://.godot/imported/Buy-Button.png-0301ce4d98006b311af225e7bcd91a4e.ctex"]
 
 [params]
 
