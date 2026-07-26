@@ -1,0 +1,14 @@
+{
+"content": "Dear Valued Employee,
+
+In the words of our great CEO, “you are slaying”
+
+Even with your new workload, you have been tackling the challenge well! Because of your efficiency, productivity, and, most of all, can do attitude, we have rewarded you with more work! See your new responsibilities below:
+
+Today’s Combo: K L I D A
+
+Sincerely,
+Your biggest fans (and bosses)
+",
+"subject": "Woooooow!"
+}

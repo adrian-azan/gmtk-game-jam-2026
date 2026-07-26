@@ -1,0 +1,17 @@
+{
+"content": "Dear Valued Employee,
+
+As the timer in the top left corner suggests, we’d like you gone! In the can! Out the door! Not working here!
+While you’re exceptionally good at [INSERT WORK DESCRIPTION HERE], we simply can’t stand having you around.
+
+I guess if you keep that timer above zero you can stay but, just know, your work is no longer needed.
+
+Try typing this:
+
+Today’s Combo: W I A L S K D J
+Love,
+Your Corporate Family
+
+",
+"subject": "go **** yourself"
+}

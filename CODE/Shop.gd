@@ -1,5 +1,4 @@
-@tool
-class_name Store
+class_name Shop
 extends Node2D
 
 var queueAmount: int
@@ -24,7 +23,7 @@ func _ready() -> void:
 	$GridContainer/Sabatoge.button_down.connect(PurchaseSabatogeCoworker)
 	$CheckEmail.button_down.connect(CheckEmail)
 	
-	HideStore()
+	Hide()
 	
 
 func _process(delta: float) -> void:
@@ -55,7 +54,7 @@ func PopulateCoins():
 func CheckEmail():
 	CustomSignals.CheckEmail.emit()
 
-func ShowStore() -> void:
+func Show() -> void:
 	$GridContainer/Queue.disabled = false
 	$GridContainer/Processing.disabled = false
 	$GridContainer/Fiver.disabled = false
@@ -64,7 +63,7 @@ func ShowStore() -> void:
 	PopulateCoins()
 	create_tween().tween_property(self, "modulate", Color(1,1,1,1), .8)
 	
-func HideStore() -> void:
+func Hide() -> void:
 	$GridContainer/Queue.disabled = true
 	$GridContainer/Processing.disabled = true
 	$GridContainer/Fiver.disabled = true

@@ -143,10 +143,9 @@ offset_left = -433.0
 offset_top = -244.0
 offset_right = 455.0
 offset_bottom = 431.0
-mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("4_4a4mv")
-theme_override_font_sizes/normal_font_size = 54
+theme_override_font_sizes/normal_font_size = 48
 text = "Example Email Content would be this example right here oh wow what a great sample"
 
 [node name="SubjectContent" type="RichTextLabel" parent="Sprite2D"]
@@ -172,9 +171,9 @@ libraries = {
 
 [node name="Button" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 228.0
+offset_left = 497.0
 offset_top = 293.0
-offset_right = 439.0
+offset_right = 708.0
 offset_bottom = 429.0
 theme_override_font_sizes/font_size = 46
 text = "Start 

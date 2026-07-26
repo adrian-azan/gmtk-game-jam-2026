@@ -1,0 +1,13 @@
+{
+"content": "Dear Valued Employee,
+
+We get it! You’re good at your job! At this point it’s getting a bit obnoxious…
+
+We’re not quite sure what you’re doing, but you’re doing it at lightning speeds.
+
+Here’s your slop:
+
+Today’s Combo: Every 4th Letter = K - Every 7th Letter = S
+",
+"subject": "Oken Then"
+}

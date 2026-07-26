@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://8sii10mj860f" path="res://CODE/RootController.gd" id="1_hrorf"]
 [ext_resource type="PackedScene" uid="uid://dno7wil2r4pif" path="res://SCENES/Player.tscn" id="2_kdmbq"]
 [ext_resource type="PackedScene" uid="uid://djj63l26w56bg" path="res://SCENES/HandButton.tscn" id="3_fvsdy"]
-[ext_resource type="PackedScene" uid="uid://bndlc0ddflyl0" path="res://SCENES/Store.tscn" id="4_q2mr4"]
+[ext_resource type="PackedScene" uid="uid://bndlc0ddflyl0" path="res://SCENES/Shop.tscn" id="4_q2mr4"]
 [ext_resource type="Script" uid="uid://dnn11by3eco6k" path="res://CODE/PlayerCamera.gd" id="6_ek2ui"]
 [ext_resource type="PackedScene" uid="uid://snpbov0fhsmi" path="res://SCENES/Clock.tscn" id="7_ek2ui"]
 [ext_resource type="PackedScene" uid="uid://duhdgmy0i5nca" path="res://SCENES/Email.tscn" id="8_4fbj0"]
@@ -27,7 +27,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Store:modulate")
+tracks/1/path = NodePath("Shop:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -103,7 +103,7 @@ tracks/3/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4fbj0"]
 _data = {
 &"RESET": SubResource("Animation_ek2ui"),
-&"ToStore": SubResource("Animation_hrorf")
+&"ToMonitor": SubResource("Animation_hrorf")
 }
 
 [node name="Root" type="Node2D"]
@@ -113,7 +113,7 @@ script = ExtResource("1_hrorf")
 texture_filter = 1
 position = Vector2(19, 14)
 scale = Vector2(1.535, 1.535)
-totalTimeSeconds = 120
+totalTimeSeconds = 60
 
 [node name="Player" parent="." instance=ExtResource("2_kdmbq")]
 position = Vector2(572, 328)
@@ -122,18 +122,9 @@ position = Vector2(572, 328)
 position = Vector2(471, 183)
 scale = Vector2(0.21, 0.21)
 
-[node name="Store" parent="." instance=ExtResource("4_q2mr4")]
+[node name="Shop" parent="." instance=ExtResource("4_q2mr4")]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(441, 124)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 322)
-script = ExtResource("6_ek2ui")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_4fbj0")
-}
 
 [node name="Clock" parent="." instance=ExtResource("7_ek2ui")]
 position = Vector2(999, 106)
@@ -149,6 +140,15 @@ scale = Vector2(0.128, 0.128)
 modulate = Color(1, 1, 1, 0)
 position = Vector2(449, 121)
 scale = Vector2(0.261, 0.261)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 322)
+script = ExtResource("6_ek2ui")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4fbj0")
+}
 
 [editable path="Player"]
 [editable path="Clock"]

@@ -1,0 +1,14 @@
+{
+"content": "Dear Valued Employee,
+
+It’s only once in a while that we find someone as committed to their work as you are. It’s almost as if you want to keep working here!
+
+Anyways… we’ve got more work for you:
+
+Today’s Combo: W A W A W A L I L I
+
+Forever yours,
+Company Name™
+",
+"subject": "Alright brother…"
+}

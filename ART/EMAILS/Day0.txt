@@ -1,0 +1,18 @@
+{
+"content": "Dear Valued Employee,
+
+Thanks so much for joining our team of movers, shakers, and paradigm shifters. We’re excited to change the world with BIG BUTTON and we hope you are too!
+
+As you likely learned in your onboarding, your main role is to press the following keys…
+
+W A S D and IJKL
+
+What does pressing the keys do you ask? Well… we’re not really sure. BUT, we DO know that pressing the keys makes timer go up! If the timer hits zero, you will no longer have a job here.
+
+Them’s the rules - now go get em tiger!
+
+Sincerely,
+A CEO Who Cares
+",
+"subject": "Welcome to the team"
+}

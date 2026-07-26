@@ -51,6 +51,10 @@ func _process(delta: float) -> void:
 		inputQueue += "W"
 	if Input.is_action_just_pressed("DoWork_8"):
 		inputQueue += "D"	
+		
+	if Input.is_action_just_pressed("Backspace"):
+		if fullReport.length() != 0:
+			fullReport = fullReport.erase(fullReport.length()-1,1)
 
 	$Label.text = str(inputQueue)
 	DrawDebug()
@@ -62,19 +66,28 @@ func Reset():
 
 	
 func DrawDebug() -> void:
-	($Debug as Label).text = "%s\n%f\n%d\n" % [maxQueueSize, processingSpeed,passiveInput] 
+	if fullReport.length() >= 15:
+		($Debug as Label).text = "%d\n%s" % [fullReport.length(), fullReport.substr(fullReport.length()-15,15)]
+	else: 
+		($Debug as Label).text = "%d\n%s\n%d" % [fullReport.length(), fullReport, OutputChecker.mistakes] 
 	
 func RemoveFromQueue() -> void:
 	if paused:
 		return
 
 	if inputQueue.length() > 0:
-		handSprite.play()
-		buttonClick.play()
-		
-		fullReport = fullReport.insert(0, inputQueue[0])
-		inputQueue = inputQueue.erase(0)
-		timeAdded.emit(120)
+		if OutputChecker.Check(fullReport + inputQueue[inputQueue.length()-1])[1] == 0:
+			handSprite.play()
+			buttonClick.play()
+			
+			fullReport += inputQueue[0]
+			inputQueue = inputQueue.erase(0)
+			timeAdded.emit(240)
+		else:
+			$AudioStreamPlayer2D2.play()
+			inputQueue = ""
+			CustomSignals.MistakeMade.emit()
+			
 		
 	timeAdded.emit(passiveInput)
 

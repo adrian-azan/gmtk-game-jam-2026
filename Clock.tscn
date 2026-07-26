@@ -1,7 +1,7 @@
 [gd_scene load_steps=68 format=3 uid="uid://cdhf1bfublwmj"]
 
 [ext_resource type="Texture2D" uid="uid://dgymqx881bxf8" path="res://ART/Sprite Sheets/Clock.png" id="1_7u8sl"]
-[ext_resource type="Script" uid="uid://wtg3o6dqsrc8" path="res://CODE/Clock.gd" id="1_ik47v"]
+[ext_resource type="Script" uid="uid://wtg3o6dqsrc8" path="res://CODE/DayTimer.gd" id="1_ik47v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ik47v"]
 atlas = ExtResource("1_7u8sl")

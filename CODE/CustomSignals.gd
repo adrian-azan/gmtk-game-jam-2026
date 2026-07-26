@@ -10,3 +10,5 @@ signal EndDay
 signal CheckEmail
 signal StartWorkDay
 signal OpenShop
+
+signal MistakeMade

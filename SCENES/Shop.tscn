@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://bndlc0ddflyl0"]
 
-[ext_resource type="Script" uid="uid://bxrbys4r2olma" path="res://CODE/Store.gd" id="1_15i0r"]
+[ext_resource type="Script" uid="uid://bxrbys4r2olma" path="res://CODE/Shop.gd" id="1_15i0r"]
 
-[node name="Store" type="Node2D"]
+[node name="Shop" type="Node2D"]
 script = ExtResource("1_15i0r")
 
 [node name="GridContainer" type="GridContainer" parent="."]

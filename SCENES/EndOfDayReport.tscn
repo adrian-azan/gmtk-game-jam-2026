@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://jimn8dd0e2vn"]
+[gd_scene load_steps=2 format=3 uid="uid://jimn8dd0e2vn"]
+
+[ext_resource type="Script" uid="uid://dat4wcm6fov2r" path="res://SCENES/EndOfDayReport.gd" id="1_eo7tm"]
 
 [node name="EndOfDayReport" type="Node2D"]
+script = ExtResource("1_eo7tm")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_right = 781.0
