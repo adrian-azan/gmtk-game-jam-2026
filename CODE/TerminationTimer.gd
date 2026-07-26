@@ -33,6 +33,9 @@ func _process(delta: float) -> void:
 	else:
 		timerLabel.text = "00:00:00"
 
+	if (timerLabel.text == "00:00:00"):
+		CustomSignals.GameOver.emit()
+
 	time -= decayRate * delta
 	
 

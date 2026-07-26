@@ -12,3 +12,4 @@ signal StartWorkDay
 signal OpenShop
 
 signal MistakeMade
+signal GameOver

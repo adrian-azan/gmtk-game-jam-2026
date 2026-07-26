@@ -116,7 +116,8 @@ _data = {
 script = ExtResource("1_hrorf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(604, 310)
+position = Vector2(594, 320)
+scale = Vector2(0.36516204, 0.38898838)
 texture = ExtResource("2_4pj4j")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -184,6 +185,9 @@ stream = ExtResource("14_3k53u")
 [node name="EODSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_h78qc")
 volume_db = -15.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
 
 [editable path="Player"]
 [editable path="Clock"]

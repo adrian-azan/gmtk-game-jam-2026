@@ -20,12 +20,15 @@ func _ready() -> void:
 	CustomSignals.StartWorkDay.connect(StartWorkDay)
 	CustomSignals.OpenShop.connect(OpenShop)
 	CustomSignals.MistakeMade.connect(MistakeMade)
+	CustomSignals.GameOver.connect(GameOver)
 
 func MistakeMade():
 	var turnRed = create_tween()
 	turnRed.tween_property($Player/Desk, "self_modulate",Color(1,.5,.5,1),.5)
 	turnRed.tween_property($Player/Desk, "self_modulate",Color(1,1,1,1),.5)
 	
+func GameOver():
+	$Sprite2D2.visible = true
 	
 		
 func EndOfDay():
