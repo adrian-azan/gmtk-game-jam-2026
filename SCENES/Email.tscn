@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://duhdgmy0i5nca"]
+[gd_scene load_steps=10 format=3 uid="uid://duhdgmy0i5nca"]
 
 [ext_resource type="Texture2D" uid="uid://3rb1qj0rj4di" path="res://ART/Assets/Email-Shell.png" id="1_8j46x"]
 [ext_resource type="Script" uid="uid://dgn5ul1dju2vb" path="res://CODE/Email.gd" id="1_f1muk"]
 [ext_resource type="SpriteFrames" uid="uid://dw4iyevmkjf88" path="res://ART/Sprite Sheets/Email_SpriteSheet.tres" id="2_lv8iw"]
 [ext_resource type="FontFile" uid="uid://dhred57yvbx2g" path="res://ART/Fonts/Geo-Regular.ttf" id="4_4a4mv"]
+[ext_resource type="Texture2D" uid="uid://c3wlyec2f4wak" path="res://ART/Assets/Next-Button.png" id="5_2x3me"]
 
 [sub_resource type="Animation" id="Animation_4a4mv"]
 resource_name = "HideEmail"
@@ -131,7 +132,6 @@ _data = {
 }
 
 [node name="Email" type="Node2D"]
-modulate = Color(1, 1, 1, 0)
 script = ExtResource("1_f1muk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -171,10 +171,9 @@ libraries = {
 
 [node name="Button" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 497.0
+offset_left = 573.0
 offset_top = 293.0
-offset_right = 708.0
+offset_right = 837.0
 offset_bottom = 429.0
 theme_override_font_sizes/font_size = 46
-text = "Start 
-WorkDay"
+icon = ExtResource("5_2x3me")

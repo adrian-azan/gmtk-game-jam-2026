@@ -1,48 +1,69 @@
-[gd_scene load_steps=2 format=3 uid="uid://bndlc0ddflyl0"]
+[gd_scene load_steps=8 format=3 uid="uid://bndlc0ddflyl0"]
 
 [ext_resource type="Script" uid="uid://bxrbys4r2olma" path="res://CODE/Shop.gd" id="1_15i0r"]
+[ext_resource type="FontFile" uid="uid://dhred57yvbx2g" path="res://ART/Fonts/Geo-Regular.ttf" id="2_gp4s4"]
+[ext_resource type="Texture2D" uid="uid://bw4yn4p3ih4au" path="res://ART/Assets/Upscale-Bandwidth-Item.png" id="3_lc1a5"]
+[ext_resource type="Texture2D" uid="uid://d2xhnuvi0qck8" path="res://ART/Assets/Offload-Bottleneck-Item.png" id="4_mdajo"]
+[ext_resource type="Texture2D" uid="uid://cbsvd7bo2p88m" path="res://ART/Assets/Implement Creativity.png" id="5_lxfvu"]
+[ext_resource type="Texture2D" uid="uid://cdbwtoxqp2oqy" path="res://ART/Assets/Believe-In-Yourself-Item.png" id="6_dueli"]
+[ext_resource type="Texture2D" uid="uid://c3wlyec2f4wak" path="res://ART/Assets/Next-Button.png" id="7_lc1a5"]
 
 [node name="Shop" type="Node2D"]
 script = ExtResource("1_15i0r")
 
 [node name="GridContainer" type="GridContainer" parent="."]
+texture_filter = 1
 offset_right = 40.0
 offset_bottom = 40.0
+scale = Vector2(0.320004, 0.320004)
 theme_override_constants/h_separation = 25
 theme_override_constants/v_separation = 25
 columns = 2
 
 [node name="Queue" type="Button" parent="GridContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_gp4s4")
+theme_override_font_sizes/font_size = 24
 disabled = true
-text = "Bigger 
-Queue"
+text = "Upscale
+Bandwidth"
+icon = ExtResource("3_lc1a5")
 
 [node name="Fiver" type="Button" parent="GridContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_gp4s4")
+theme_override_font_sizes/font_size = 24
 disabled = true
-text = "Fiver 
-Contractor"
+text = "Offload
+Bottleneck"
+icon = ExtResource("4_mdajo")
 
 [node name="Processing" type="Button" parent="GridContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_gp4s4")
+theme_override_font_sizes/font_size = 24
 disabled = true
-text = "Increase 
-Token"
+text = "Implement
+Creativity"
+icon = ExtResource("5_lxfvu")
 
 [node name="Sabatoge" type="Button" parent="GridContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_gp4s4")
+theme_override_font_sizes/font_size = 24
 disabled = true
-text = "Sabotage
-Coworker"
+text = "Believe in
+Yourself "
+icon = ExtResource("6_dueli")
 
 [node name="CheckEmail" type="Button" parent="."]
 offset_left = 200.0
 offset_top = 103.0
 offset_right = 302.0
 offset_bottom = 134.0
+scale = Vector2(0.24, 0.24)
 disabled = true
-text = "Check Email"
+icon = ExtResource("7_lc1a5")
 
 [node name="Coins" type="Node2D" parent="."]
 position = Vector2(208, 14)
