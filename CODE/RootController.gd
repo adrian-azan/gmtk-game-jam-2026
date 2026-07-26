@@ -22,6 +22,9 @@ func _ready() -> void:
 	CustomSignals.MistakeMade.connect(MistakeMade)
 	CustomSignals.GameOver.connect(GameOver)
 
+func _process(delta: float) -> void:
+	$Label.text = str(handButton.fullReport.length())
+
 func MistakeMade():
 	var turnRed = create_tween()
 	turnRed.tween_property($Player/Desk, "self_modulate",Color(1,.5,.5,1),.5)
@@ -29,6 +32,8 @@ func MistakeMade():
 	
 func GameOver():
 	$Sprite2D2.visible = true
+	dayTimer.frameProgressionTimer.paused = true
+	handButton.paused = true
 	
 		
 func EndOfDay():

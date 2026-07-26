@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cdtlimp3d1pgk"]
+[gd_scene load_steps=20 format=3 uid="uid://cdtlimp3d1pgk"]
 
 [ext_resource type="PackedScene" uid="uid://bflos3e4ovdbb" path="res://SCENES/TerminationTimer.tscn" id="1_0ga8e"]
 [ext_resource type="Script" uid="uid://8sii10mj860f" path="res://CODE/RootController.gd" id="1_hrorf"]
@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://bj0x5uc700noe" path="res://SOUND/MUSIC/Main-Theme-No-Drums.mp3" id="13_3k53u"]
 [ext_resource type="AudioStream" uid="uid://nh0v8f0hmflj" path="res://SOUND/SFX/Email-Sound.mp3" id="14_3k53u"]
 [ext_resource type="AudioStream" uid="uid://snstejmt3wk" path="res://SOUND/SFX/EOD-Option-2.mp3" id="15_h78qc"]
+[ext_resource type="Texture2D" uid="uid://cpdoqa2qhb8ta" path="res://ART/Assets/Fired-Letter.png" id="16_fpadg"]
 
 [sub_resource type="Animation" id="Animation_ek2ui"]
 length = 0.001
@@ -188,6 +189,19 @@ volume_db = -15.0
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 visible = false
+z_index = 19
+position = Vector2(588, 292)
+scale = Vector2(0.824, 0.812)
+texture = ExtResource("16_fpadg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 704.0
+offset_top = 114.0
+offset_right = 1232.0
+offset_bottom = 224.0
+theme_override_fonts/font = ExtResource("2_0jmbu")
+theme_override_font_sizes/font_size = 27
+text = "w"
 
 [editable path="Player"]
 [editable path="Clock"]

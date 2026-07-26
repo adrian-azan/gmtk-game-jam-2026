@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpnq4mgaar0nu"
-path="res://.godot/imported/Buy-Button.png-0301ce4d98006b311af225e7bcd91a4e.ctex"
+uid="uid://cpdoqa2qhb8ta"
+path="res://.godot/imported/Fired-Letter.png-36378c788448c903e0c1cd3a779bcf16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ART/Assets/Buy-Button.png"
-dest_files=["res://.godot/imported/Buy-Button.png-0301ce4d98006b311af225e7bcd91a4e.ctex"]
+source_file="res://ART/Assets/Fired-Letter.png"
+dest_files=["res://.godot/imported/Fired-Letter.png-36378c788448c903e0c1cd3a779bcf16.ctex"]
 
 [params]
 
