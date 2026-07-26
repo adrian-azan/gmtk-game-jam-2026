@@ -39,6 +39,9 @@ func EndOfDay():
 		email.SetText(content["content"], content["subject"])
 	else:
 		email.SetText("...", ">:[")
+		
+	if handButton.fullReport.length() < 20:
+		OutputChecker.mistakes = 5
 			
 	endOfDayReport.UpdateText()
 	
@@ -58,6 +61,8 @@ func StartWorkDay():
 	email.Hide()
 	OutputChecker.mistakes = 0
 	OutputChecker.patternCounter = 0
+	
+	terminationTimer.decayRate *= 1.1
 
 	handButton.paused = false
 	terminationTimer.paused = false
