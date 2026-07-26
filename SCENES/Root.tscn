@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cdtlimp3d1pgk"]
+[gd_scene load_steps=19 format=3 uid="uid://cdtlimp3d1pgk"]
 
 [ext_resource type="PackedScene" uid="uid://bflos3e4ovdbb" path="res://SCENES/TerminationTimer.tscn" id="1_0ga8e"]
 [ext_resource type="Script" uid="uid://8sii10mj860f" path="res://CODE/RootController.gd" id="1_hrorf"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://jimn8dd0e2vn" path="res://SCENES/EndOfDayReport.tscn" id="9_1oaoh"]
 [ext_resource type="AudioStream" uid="uid://bu1bkod3g0nm5" path="res://SOUND/MUSIC/Main-Theme.mp3" id="12_r708p"]
 [ext_resource type="AudioStream" uid="uid://bj0x5uc700noe" path="res://SOUND/MUSIC/Main-Theme-No-Drums.mp3" id="13_3k53u"]
+[ext_resource type="AudioStream" uid="uid://nh0v8f0hmflj" path="res://SOUND/SFX/Email-Sound.mp3" id="14_3k53u"]
+[ext_resource type="AudioStream" uid="uid://snstejmt3wk" path="res://SOUND/SFX/EOD-Option-2.mp3" id="15_h78qc"]
 
 [sub_resource type="Animation" id="Animation_ek2ui"]
 length = 0.001
@@ -121,8 +123,8 @@ texture = ExtResource("2_4pj4j")
 texture_filter = 1
 offset_left = 19.0
 offset_top = 11.0
-offset_right = 346.0
-offset_bottom = 60.0
+offset_right = 335.0
+offset_bottom = 63.0
 theme_override_fonts/normal_font = ExtResource("2_0jmbu")
 theme_override_font_sizes/normal_font_size = 48
 text = "Termination Timer"
@@ -175,6 +177,13 @@ parameters/looping = true
 [node name="ShopMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_3k53u")
 parameters/looping = true
+
+[node name="EmailSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_3k53u")
+
+[node name="EODSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_h78qc")
+volume_db = -15.0
 
 [editable path="Player"]
 [editable path="Clock"]

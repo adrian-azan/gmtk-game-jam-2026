@@ -29,6 +29,7 @@ func MistakeMade():
 	
 		
 func EndOfDay():
+	$EODSound.play()
 	terminationTimer.paused = true
 	handButton.paused = true
 	$WorkMusic.stream_paused = true
@@ -58,6 +59,7 @@ func OpenShop():
 
 func CheckEmail():
 	shop.Hide()
+	$EmailSound.play()
 	email.Show()
 		
 func StartWorkDay():
