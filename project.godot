@@ -12,13 +12,18 @@ config_version=5
 
 config/name="GMTK Game Jam 2026"
 run/main_scene="uid://cv4qqb5v4h44k"
-config/features=PackedStringArray("4.5", "C#", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 CustomSignals="*res://CODE/CustomSignals.gd"
 OutputChecker="*res://CODE/OutputChecker.gd"
+
+[display]
+
+window/size/resizable=false
+window/stretch/mode="viewport"
 
 [dotnet]
 
