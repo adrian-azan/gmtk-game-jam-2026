@@ -1,0 +1,149 @@
+[gd_scene load_steps=16 format=3 uid="uid://cv4qqb5v4h44k"]
+
+[ext_resource type="Script" uid="uid://b2nl74eb0pall" path="res://CODE/RootIntro.gd" id="1_yog08"]
+[ext_resource type="Texture2D" uid="uid://dukjvwkebldkd" path="res://ART/Assets/GMTKGJ-BG.png" id="2_3c1f0"]
+[ext_resource type="Texture2D" uid="uid://degmro023f6tg" path="res://ART/Assets/Desk-PC.png" id="3_0aa8e"]
+[ext_resource type="PackedScene" uid="uid://duhdgmy0i5nca" path="res://SCENES/Email.tscn" id="9_yk087"]
+[ext_resource type="Script" uid="uid://dnn11by3eco6k" path="res://CODE/PlayerCamera.gd" id="11_ndt1c"]
+[ext_resource type="AudioStream" uid="uid://bu1bkod3g0nm5" path="res://SOUND/MUSIC/Main-Theme.mp3" id="12_7h30d"]
+[ext_resource type="AudioStream" uid="uid://bj0x5uc700noe" path="res://SOUND/MUSIC/Main-Theme-No-Drums.mp3" id="13_66ne2"]
+[ext_resource type="AudioStream" uid="uid://nh0v8f0hmflj" path="res://SOUND/SFX/Email-Sound.mp3" id="14_jhppb"]
+[ext_resource type="AudioStream" uid="uid://snstejmt3wk" path="res://SOUND/SFX/EOD-Option-2.mp3" id="15_w1e21"]
+[ext_resource type="AudioStream" uid="uid://xayi7oqfsog7" path="res://ART/Assets/Yell.mp3" id="16_8daq6"]
+[ext_resource type="Texture2D" uid="uid://cpdoqa2qhb8ta" path="res://ART/Assets/Fired-Letter.png" id="17_2tdn5"]
+
+[sub_resource type="Animation" id="Animation_ek2ui"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Email:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.001),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hrorf"]
+resource_name = "ToStore"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(3.635, 3.635)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(576, 322), Vector2(591, 189)]
+}
+
+[sub_resource type="Animation" id="Animation_yog08"]
+resource_name = "Intro"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("Email:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(5.0333333, 5.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4.866667, 7.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"CheckEmail"
+}, {
+"args": [],
+"method": &"ZoomScreen"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4fbj0"]
+_data = {
+&"Intro": SubResource("Animation_yog08"),
+&"RESET": SubResource("Animation_ek2ui"),
+&"ToMonitor": SubResource("Animation_hrorf")
+}
+
+[node name="Root_Intro" type="Node2D"]
+script = ExtResource("1_yog08")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(594, 320)
+scale = Vector2(0.365162, 0.388988)
+texture = ExtResource("2_3c1f0")
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(572, 328)
+
+[node name="Desk" type="Sprite2D" parent="Player"]
+texture = ExtResource("3_0aa8e")
+
+[node name="Email" parent="." instance=ExtResource("9_yk087")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(594, 191)
+scale = Vector2(0.128, 0.128)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 322)
+script = ExtResource("11_ndt1c")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4fbj0")
+}
+
+[node name="WorkMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_7h30d")
+parameters/looping = true
+
+[node name="ShopMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_66ne2")
+parameters/looping = true
+
+[node name="EmailSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_jhppb")
+
+[node name="EODSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_w1e21")
+volume_db = -15.0
+
+[node name="GameOver" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_8daq6")
+volume_db = 12.784
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+z_index = 19
+position = Vector2(588, 292)
+scale = Vector2(0.824, 0.812)
+texture = ExtResource("17_2tdn5")

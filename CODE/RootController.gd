@@ -21,7 +21,8 @@ func _ready() -> void:
 	CustomSignals.OpenShop.connect(OpenShop)
 	CustomSignals.MistakeMade.connect(MistakeMade)
 	CustomSignals.GameOver.connect(GameOver)
-
+	animationPlayer.play_backwards("ToMonitor")
+	
 func _process(delta: float) -> void:
 	$Label.text = str(handButton.fullReport.length())
 
@@ -38,6 +39,7 @@ func GameOver():
 	
 		
 func EndOfDay():
+	$Label.visible = false
 	$EODSound.play()
 	terminationTimer.paused = true
 	handButton.paused = true
@@ -72,6 +74,7 @@ func CheckEmail():
 	email.Show()
 		
 func StartWorkDay():
+	$Label.visible = true
 	$ShopMusic.stream_paused = true
 	$WorkMusic.play()
 	email.Hide()

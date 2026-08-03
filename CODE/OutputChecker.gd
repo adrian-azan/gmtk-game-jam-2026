@@ -1,7 +1,7 @@
 extends Node
 
 var mistakes: int
-var dayCount: int = 0
+var dayCount: int = 1
 
 var patternCounter = 0
 

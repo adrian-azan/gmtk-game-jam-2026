@@ -17,6 +17,7 @@ func CloseEmail():
 func Hide():
 	animationPlayer.play("HideEmail")
 	$Sprite2D/EmailContent.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$Button.disabled = true
 
 
 func Show():

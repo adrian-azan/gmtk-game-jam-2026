@@ -57,10 +57,10 @@ Yourself "
 icon = ExtResource("6_dueli")
 
 [node name="CheckEmail" type="Button" parent="."]
-offset_left = 200.0
+offset_left = 194.0
 offset_top = 103.0
-offset_right = 302.0
-offset_bottom = 134.0
+offset_right = 458.0
+offset_bottom = 191.0
 scale = Vector2(0.24, 0.24)
 disabled = true
 icon = ExtResource("7_lc1a5")
