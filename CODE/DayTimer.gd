@@ -3,7 +3,7 @@ extends Node2D
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 var frameProgressionTimer: Timer
-var endOfDayCount: int = 0
+var endOfDayCount: int = 62
 
 func _ready() -> void:
 	frameProgressionTimer = Timer.new()
@@ -25,5 +25,5 @@ func ProgressFrame():
 
 func Reset():
 	frameProgressionTimer.start(1.875/2)
-	endOfDayCount = 0
+	endOfDayCount = 62
 	sprite.frame = 0

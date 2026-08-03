@@ -1,4 +1,7 @@
-{
+[gd_resource type="JSON" format=3 uid="uid://v2mmpq0va1ba"]
+
+[resource]
+data = {
 "content": "Dear Valued Employee,
 
 We get it! You’re good at your job! At this point it’s getting a bit obnoxious…

@@ -1,4 +1,7 @@
-{
+[gd_resource type="JSON" format=3 uid="uid://w3t0qs38dxjg"]
+
+[resource]
+data = {
 "content": "Dear Valued Employee,
 
 As the timer in the top left corner suggests, we’d like you gone! In the can! Out the door! Not working here!

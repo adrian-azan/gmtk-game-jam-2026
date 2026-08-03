@@ -1,4 +1,7 @@
-{
+[gd_resource type="JSON" format=3 uid="uid://cqybkl5p7b147"]
+
+[resource]
+data = {
 "content": "Dear Valued Employee,
 
 In the words of our great CEO, “you are slaying”

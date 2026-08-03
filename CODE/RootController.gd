@@ -38,7 +38,6 @@ func GameOver():
 	
 		
 func EndOfDay():
-	$Label.hide()
 	$EODSound.play()
 	terminationTimer.paused = true
 	handButton.paused = true
@@ -49,8 +48,8 @@ func EndOfDay():
 	OutputChecker.dayCount += 1
 
 	if OutputChecker.dayCount <= 5:	
-		var content = JSON.parse_string(FileAccess.get_file_as_string("res://ART/EMAILS/Day%d.txt" % OutputChecker.dayCount))
-		email.SetText(content["content"], content["subject"])
+		var content = ResourceLoader.load("res://ART/EMAILS/Day%dJ.tres" % OutputChecker.dayCount, "JSON") as JSON
+		email.SetText(content.data["content"], content.data["subject"])
 	else:
 		email.SetText("...", ">:[")
 		
@@ -83,7 +82,6 @@ func StartWorkDay():
 
 	handButton.paused = false
 	terminationTimer.paused = false
-	$Label.show()
 	
 	handButton.Reset()
 	dayTimer.Reset()
